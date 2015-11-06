@@ -1,6 +1,7 @@
 
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -21,6 +22,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 
     Command autonomousCommand;
+    Encoder e;
 
     /**
      * This function is run when the robot is first started up and should be
