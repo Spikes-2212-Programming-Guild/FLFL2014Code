@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Timing extends Subsystem {
     private TalonSRX t1,t2;
+    
     public Timing(TalonSRX t1,TalonSRX t2){
     	this.t1=t1;
     	this.t2=t2;

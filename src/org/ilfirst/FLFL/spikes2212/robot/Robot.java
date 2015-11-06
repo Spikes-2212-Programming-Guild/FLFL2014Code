@@ -2,12 +2,14 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Timing;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
-
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gun;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the IterativeRobot
@@ -16,8 +18,11 @@ import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
  * directory.
  */
 public class Robot extends IterativeRobot {
-
-	public static final Drivetrain DRIVETRAIN = new Drivetrain(null, null);
+	public static final Gearbox left_gearbox=new Gearbox(RobotMap.GEARBOXLEFTFRONTPORT,RobotMap.GEARBOXLEFTREARPORT);
+	public static final Gearbox right_gearbox=new Gearbox(RobotMap.GEARBOXRIGHTFRONTPORT,RobotMap.GEARBOXRIGHTREARPORT);
+	public static final Drivetrain drivetrain = new Drivetrain(left_gearbox,  right_gearbox);
+	public static final Gun Gun=new Gun(new TalonSRX(RobotMap.GUNLEFTPORT) , new TalonSRX(RobotMap.GUNRIGHTPORT));
+	public static final Timing Timing=new Timing(new TalonSRX(RobotMap.TIMINGRIGHTPORT),new TalonSRX(RobotMap.TIMINGLEFTPORT));
 	public static OI oi;
 
     Command autonomousCommand;
@@ -34,6 +39,7 @@ public class Robot extends IterativeRobot {
 	
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
+		
 	}
 
     public void autonomousInit() {
@@ -49,6 +55,7 @@ public class Robot extends IterativeRobot {
     }
 
     public void teleopInit() {
+    	
 		// This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove

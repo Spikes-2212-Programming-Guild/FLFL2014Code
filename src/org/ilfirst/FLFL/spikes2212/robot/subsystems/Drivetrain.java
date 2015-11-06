@@ -1,7 +1,8 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
-import org.ilfirst.FLFL.spikes2212.robot.commands.Drive;
+import org.ilfirst.FLFL.spikes2212.robot.commands.Straight;
+import org.ilfirst.FLFL.spikes2212.robot.commands.Tank;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -26,14 +27,13 @@ public class Drivetrain extends Subsystem{
 	}
 	
 	public void tank(double leftSpeed, double rightSpeed){
-		if(Robot.oi.joystick.getTrigger()) {
 			left.set(leftSpeed);
 			right.set(-rightSpeed);
-		}
+		
 	}
 
 	@Override
 	protected void initDefaultCommand() {
-		setDefaultCommand(new  Drive());
+		setDefaultCommand(new  Tank());
 	}
 }
