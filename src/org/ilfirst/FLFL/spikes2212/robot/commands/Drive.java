@@ -1,18 +1,17 @@
-
 package org.ilfirst.FLFL.spikes2212.robot.commands;
-
-import edu.wpi.first.wpilibj.command.Command;
-
+import org.ilfirst.FLFL.spikes2212.robot.OI;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class ExampleCommand extends Command {
-
-    public ExampleCommand() {
-        // Use requires() here to declare subsystem dependencies
-        requires(Robot.exampleSubsystem);
+public class Drive extends Command {
+	
+    public Drive() {
+        requires(Robot.DRIVETRAIN);// Use requires() here to declare subsystem dependencies
+        // eg. requires(chassis);
     }
 
     // Called just before this Command runs the first time
@@ -21,6 +20,9 @@ public class ExampleCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.DRIVETRAIN.straight(Robot.oi.joystick.getY());
+    	Robot.DRIVETRAIN.turn(Robot.oi.joystick.getX());
+    	Robot.DRIVETRAIN.tank(Robot.oi.joystick.getY(), Robot.oi.joystick1.getY());
     }
 
     // Make this return true when this Command no longer needs to run execute()

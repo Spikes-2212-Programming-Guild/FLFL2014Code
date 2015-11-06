@@ -1,7 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
-import org.ilfirst.FLFL.team2212.robot.Robot;
-import org.usfirst.frc.team2212.robot.commands.Drive;
+import org.ilfirst.FLFL.spikes2212.robot.Robot;
+import org.ilfirst.FLFL.spikes2212.robot.commands.Drive;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
