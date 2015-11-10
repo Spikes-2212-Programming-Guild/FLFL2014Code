@@ -11,10 +11,13 @@ public class RobotMap {
 	public static final int LEFTFRONTPORT = 1;
 	public static final int RIGHTREARPORT = 1;
 	public static final int LEFTREARPORT = 1;
-	public static final int SHOOTINGTALONPORT = 1;
-	public static final int DOUBLESOLENOIDPORT1 = 1;
-	public static final int DOUBLESOLENOIDPORT2 = 1;
+	public static final int SHOOTINGTALONPORT1 = 1;
+	public static final int SHOOTINGTALONPORT2 = 1;
+	public static final int CHARGINGTALONPORT1 = 1;
+	public static final int CHARGINGTALONPORT2 = 1;
 	public static final int RIGHTDRIVERPORT = 2;
 	public static final int LEFTDRIVERPORT = 2;
 	public static final int NAVIGATORPORT = 2;
+	public static final double CHARGINGSPEED = 2;
+
 }

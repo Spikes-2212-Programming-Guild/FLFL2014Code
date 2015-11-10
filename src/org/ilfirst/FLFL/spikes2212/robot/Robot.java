@@ -2,8 +2,8 @@ package org.ilfirst.FLFL.spikes2212.robot;
 
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
-import org.ilfirst.FLFL.spikes2212.robot.subsystems.Reloadingwithpiston;
-import org.ilfirst.FLFL.spikes2212.robot.subsystems.Shootingwith1talon;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gun;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Timing;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -14,8 +14,8 @@ public class Robot extends IterativeRobot {
 
 	public static OI oi;
 	public static Drivetrain driveTrain;
-	public static Reloadingwithpiston loadingWithPiston;
-	public static Shootingwith1talon shootingWith1Talon;
+	public static Timing timing;
+	public static Gun gun;
 
 	@Override
 	public void robotInit() {
@@ -24,9 +24,9 @@ public class Robot extends IterativeRobot {
 		Gearbox left = new Gearbox(RobotMap.LEFTFRONTPORT,
 				RobotMap.LEFTREARPORT);
 		driveTrain = new Drivetrain(left, right);
-		shootingWith1Talon = new Shootingwith1talon(RobotMap.SHOOTINGTALONPORT);
-		loadingWithPiston = new Reloadingwithpiston(
-				RobotMap.DOUBLESOLENOIDPORT1, RobotMap.DOUBLESOLENOIDPORT2);
+		gun = new Gun(RobotMap.SHOOTINGTALONPORT1, RobotMap.SHOOTINGTALONPORT2);
+		timing = new Timing(RobotMap.CHARGINGTALONPORT1,
+				RobotMap.CHARGINGTALONPORT2);
 		oi = new OI();
 	}
 
@@ -41,7 +41,6 @@ public class Robot extends IterativeRobot {
 		SmartDashboard
 				.putNumber("Right Side Speed", driveTrain.getrightspeed());
 		SmartDashboard.putNumber("Left Side Speed", driveTrain.getleftspeed());
-		SmartDashboard.putBoolean("Is Piston Out", loadingWithPiston.isOpen);
 	}
 
 	@Override
