@@ -1,6 +1,8 @@
 
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.command.Command;
@@ -10,20 +12,15 @@ import org.ilfirst.FLFL.spikes2212.robot.subsystems.Timing;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gun;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
-/**
- * The VM is configured to automatically run this class, and to call the
- * functions corresponding to each mode, as described in the IterativeRobot
- * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the manifest file in the resource
- * directory.
- */
+
 public class Robot extends IterativeRobot {
 	public static final Gearbox left_gearbox=new Gearbox(RobotMap.GEARBOXLEFTFRONTPORT,RobotMap.GEARBOXLEFTREARPORT);
 	public static final Gearbox right_gearbox=new Gearbox(RobotMap.GEARBOXRIGHTFRONTPORT,RobotMap.GEARBOXRIGHTREARPORT);
-	public static final Drivetrain drivetrain = new Drivetrain(left_gearbox,  right_gearbox);
-	public static final Gun Gun=new Gun(new TalonSRX(RobotMap.GUNLEFTPORT) , new TalonSRX(RobotMap.GUNRIGHTPORT));
+	public static final Drivetrain drivetrain = new Drivetrain(left_gearbox,  right_gearbox,new DigitalInput(RobotMap.SENSORFRONTPORT));
+	public static final Gun Gun=new Gun(new CANTalon(RobotMap.GUNLEFTPORT) , new CANTalon(RobotMap.GUNRIGHTPORT));
 	public static final Timing Timing=new Timing(new TalonSRX(RobotMap.TIMINGRIGHTPORT),new TalonSRX(RobotMap.TIMINGLEFTPORT));
 	public static OI oi;
+	 
 
     Command autonomousCommand;
 
