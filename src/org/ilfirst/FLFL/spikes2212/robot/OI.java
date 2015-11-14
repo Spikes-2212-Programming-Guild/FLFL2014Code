@@ -7,8 +7,6 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI /* GEVALD */{
-	public static JoystickButton shoot = new JoystickButton(
-			JoystickMap.navigatorStick, 2);
 	public static JoystickButton reload = new JoystickButton(
 			JoystickMap.navigatorStick, 3);
 	public static JoystickButton loaded = new JoystickButton(
@@ -21,10 +19,10 @@ public class OI /* GEVALD */{
 			JoystickMap.navigatorStick, 1);
 
 	public OI() {
-		shoot.whenPressed(Commands.shoot);
 		reload.whileHeld(Commands.reload);
-		forwardorturn.whileHeld(Commands.joystickturnandstraight);
-		twosides.whileHeld(Commands.doublejoystickdrive);
+		forwardorturn.whileHeld(Commands.joystickstraightorturn);
+		twosides.whileHeld(Commands.doublejoystickdriving);// whileheld or
+															// whenpressed?
 		shoottrigger.whenPressed(Commands.shoot);
 	}
 }

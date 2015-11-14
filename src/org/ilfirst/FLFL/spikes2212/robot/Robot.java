@@ -14,7 +14,7 @@ public class Robot extends IterativeRobot {
 
 	public static OI oi;
 	public static Drivetrain driveTrain;
-	public static Timing timing;
+	public static Timing charger;
 	public static Gun gun;
 
 	@Override
@@ -25,7 +25,7 @@ public class Robot extends IterativeRobot {
 				RobotMap.LEFTREARPORT);
 		driveTrain = new Drivetrain(left, right);
 		gun = new Gun(RobotMap.SHOOTINGTALONPORT1, RobotMap.SHOOTINGTALONPORT2);
-		timing = new Timing(RobotMap.CHARGINGTALONPORT1,
+		charger = new Timing(RobotMap.CHARGINGTALONPORT1,
 				RobotMap.CHARGINGTALONPORT2);
 		oi = new OI();
 	}

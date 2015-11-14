@@ -5,11 +5,28 @@ import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickArcade;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickStraightOrTurn;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Reload;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Shoot;
+import org.ilfirst.FLFL.spikes2212.robot.commands.StopCharger;
+import org.ilfirst.FLFL.spikes2212.robot.commands.StopDrivetrain;
+import org.ilfirst.FLFL.spikes2212.robot.commands.StopGun;
 
 public class Commands {
-	public JoystickArcade joystickarcade;
-	public JoystickStraightOrTurn joystickstraightorturn;
-	public DoubleJoystickDriving doublejoystickdriving;
-	public Reload reload;
-	public Shoot shoot;
+	public static JoystickArcade joystickarcade;
+	public static JoystickStraightOrTurn joystickstraightorturn;
+	public static DoubleJoystickDriving doublejoystickdriving;
+	public static Reload reload;
+	public static Shoot shoot;
+	public static StopCharger stopcharger;
+	public static StopDrivetrain stopdrivetrain;
+	public static StopGun stopgun;
+
+	public Commands() {
+		joystickarcade = new JoystickArcade();
+		joystickstraightorturn = new JoystickStraightOrTurn();
+		doublejoystickdriving = new DoubleJoystickDriving();
+		reload = new Reload();
+		shoot = new Shoot();
+		stopcharger = new StopCharger();
+		stopdrivetrain = new StopDrivetrain();
+		stopgun = new StopGun();
+	}
 }
