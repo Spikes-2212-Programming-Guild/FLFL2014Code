@@ -3,8 +3,8 @@ package org.ilfirst.FLFL.spikes2212.robot;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Arms;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
-import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gun;
+import org.ilfirst.FLFL.spikes2212.robot.util.Gearbox;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;

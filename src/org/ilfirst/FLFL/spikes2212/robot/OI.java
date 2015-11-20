@@ -19,7 +19,7 @@ public class OI /* GEVALD */ {
 		forwardOrTurn.whileHeld(Commands.joystickStraightOrTurn);
 		twoSides.whileHeld(Commands.doubleJoystickDriving);// whileheld or //
 															// whenpressed?
-		shootTrigger.whenPressed(Commands.shoot);
+		shootTrigger.whenPressed(Commands.joystickShoot);
 		closeArms.whenPressed(Commands.closeArms);
 		openArms.whenPressed(Commands.openArms);
 	}

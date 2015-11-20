@@ -12,7 +12,7 @@ public class DrivingAndShooting extends CommandGroup {
 	public DrivingAndShooting() {
 		addParallel(Commands.joystickStraightOrTurn);
 		addSequential(Commands.charge);
-		addSequential(Commands.shoot);
+		addSequential(Commands.joystickShoot);
 		// TODO Auto-generated constructor stub {
 		// Add Commands here:
 		// e.g. addSequential(new Command1());
