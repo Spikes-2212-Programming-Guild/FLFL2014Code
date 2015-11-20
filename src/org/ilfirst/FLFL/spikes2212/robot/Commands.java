@@ -1,8 +1,8 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseArms;
-import org.ilfirst.FLFL.spikes2212.robot.commands.CloseJoints;
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseHands;
+import org.ilfirst.FLFL.spikes2212.robot.commands.CloseJoints;
 import org.ilfirst.FLFL.spikes2212.robot.commands.DoubleJoystickDriving;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickArcade;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickStraightOrTurn;
@@ -45,5 +45,6 @@ public class Commands {
 		openHands = new OpenHands();
 		openJoints = new OpenJoints();
 		stopArms = new StopArms();
+		closeArms = new CloseArms();
 	}
 }
