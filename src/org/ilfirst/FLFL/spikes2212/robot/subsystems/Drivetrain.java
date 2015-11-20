@@ -72,7 +72,7 @@ public class Drivetrain extends Subsystem {
 
 	@Override
 	protected void initDefaultCommand() {
-		setDefaultCommand(Commands.joystickarcade);
+		setDefaultCommand(Commands.joystickArcade);
 		// TODO Auto-generated method stub}
 	}
 }

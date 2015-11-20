@@ -20,8 +20,8 @@ public class OI /* GEVALD */{
 
 	public OI() {
 		reload.whileHeld(Commands.reload);
-		forwardorturn.whileHeld(Commands.joystickstraightorturn);
-		twosides.whileHeld(Commands.doublejoystickdriving);// whileheld or
+		forwardorturn.whileHeld(Commands.joystickStraightOrTurn);
+		twosides.whileHeld(Commands.doubleJoystickDriving);// whileheld or
 															// whenpressed?
 		shoottrigger.whenPressed(Commands.shoot);
 	}

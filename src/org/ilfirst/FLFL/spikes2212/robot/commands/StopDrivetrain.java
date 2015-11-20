@@ -12,7 +12,7 @@ public class StopDrivetrain extends SingleActionCommand {
 	}
 
 	@Override
-	public void oigevald() {
+	public void DoAction() {
 		Robot.driveTrain.stop();
 	}
 }

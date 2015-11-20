@@ -10,8 +10,8 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class CloseArms extends CommandGroup {
 
 	public CloseArms() {
-		addParallel(Commands.closejoints);
-		addParallel(Commands.closehands);
+		addParallel(Commands.closeJoints);
+		addParallel(Commands.closeHands);
 
 		// Add Commands here:
 		// e.g. addSequential(new Command1());

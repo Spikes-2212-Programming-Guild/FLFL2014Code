@@ -37,7 +37,7 @@ public class Gun extends Subsystem {
 	// here. Call these from Commands.
 	@Override
 	public void initDefaultCommand() { // Set the default command for a
-		setDefaultCommand(Commands.stopgun);// subsystem here.
+		setDefaultCommand(Commands.stopGun);// subsystem here.
 		// setDefaultCommand(new MySpecialCommand());
 	}
 }

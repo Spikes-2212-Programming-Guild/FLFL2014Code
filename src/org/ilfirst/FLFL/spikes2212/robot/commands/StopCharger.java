@@ -12,7 +12,7 @@ public class StopCharger extends SingleActionCommand {
 	}
 
 	@Override
-	public void oigevald() {
+	public void DoAction() {
 		Robot.charger.stop();
 	}
 }

@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Closehands extends Command {
+public class CloseHands extends Command {
 
-	public Closehands() {
+	public CloseHands() {
 		requires(Robot.arms);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);

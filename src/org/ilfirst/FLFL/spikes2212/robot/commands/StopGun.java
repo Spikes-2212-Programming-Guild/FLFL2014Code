@@ -12,7 +12,7 @@ public class StopGun extends SingleActionCommand {
 	}
 
 	@Override
-	public void oigevald() {
+	public void DoAction() {
 		Robot.gun.stop();
 	}
 }
