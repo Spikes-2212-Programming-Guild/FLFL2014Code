@@ -1,14 +1,15 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import org.ilfirst.FLFL.spikes2212.robot.commands.Charge;
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseHands;
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseJoints;
 import org.ilfirst.FLFL.spikes2212.robot.commands.DoubleJoystickDriving;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickArcade;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickStraightOrTurn;
+import org.ilfirst.FLFL.spikes2212.robot.commands.OpenArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.OpenHands;
 import org.ilfirst.FLFL.spikes2212.robot.commands.OpenJoints;
-import org.ilfirst.FLFL.spikes2212.robot.commands.Reload;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopCharger;
@@ -19,7 +20,7 @@ public class Commands {
 	public static JoystickArcade joystickArcade;
 	public static JoystickStraightOrTurn joystickStraightOrTurn;
 	public static DoubleJoystickDriving doubleJoystickDriving;
-	public static Reload reload;
+	public static Charge charge;
 	public static Shoot shoot;
 	public static StopCharger stopCharger;
 	public static StopDrivetrain stopDrivetrain;
@@ -30,12 +31,13 @@ public class Commands {
 	public static OpenJoints openJoints;
 	public static StopArms stopArms;
 	public static CloseArms closeArms;
+	public static OpenArms openArms;
 
 	public Commands() {
 		joystickArcade = new JoystickArcade();
 		joystickStraightOrTurn = new JoystickStraightOrTurn();
 		doubleJoystickDriving = new DoubleJoystickDriving();
-		reload = new Reload();
+		charge = new Charge();
 		shoot = new Shoot();
 		stopCharger = new StopCharger();
 		stopDrivetrain = new StopDrivetrain();
@@ -46,5 +48,6 @@ public class Commands {
 		openJoints = new OpenJoints();
 		stopArms = new StopArms();
 		closeArms = new CloseArms();
+		openArms = new OpenArms();
 	}
 }

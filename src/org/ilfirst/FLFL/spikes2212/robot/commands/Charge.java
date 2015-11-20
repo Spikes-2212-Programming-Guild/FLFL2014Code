@@ -7,9 +7,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Reload extends Command {
+public class Charge extends Command {
 
-	public Reload() {
+	public Charge() {
 		requires(Robot.charger);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);

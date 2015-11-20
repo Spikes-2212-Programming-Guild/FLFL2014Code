@@ -7,13 +7,11 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 /**
  *
  */
-public class DrivingAndShooting extends CommandGroup {
+public class OpenArms extends CommandGroup {
 
-	public DrivingAndShooting() {
-		addParallel(Commands.joystickStraightOrTurn);
-		addSequential(Commands.charge);
-		addSequential(Commands.shoot);
-		// TODO Auto-generated constructor stub {
+	public OpenArms() {
+		addParallel(Commands.openJoints);
+		addParallel(Commands.openHands);
 		// Add Commands here:
 		// e.g. addSequential(new Command1());
 		// addSequential(new Command2());

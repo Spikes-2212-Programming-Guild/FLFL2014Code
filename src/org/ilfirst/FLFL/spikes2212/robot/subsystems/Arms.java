@@ -1,16 +1,16 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
+import org.ilfirst.FLFL.spikes2212.robot.Commands;
+
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Arms extends Subsystem {
-	private Victor righthandmotor, rightjointmotor, lefthandmotor,
-			leftjointmotor;
+	private Victor righthandmotor, rightjointmotor, lefthandmotor, leftjointmotor;
 	private DigitalInput iscollected;
 
-	public Arms(Victor lefthandmotor, Victor leftjointmotor,
-			Victor rightjointmotor, Victor righthandmotor,
+	public Arms(Victor lefthandmotor, Victor leftjointmotor, Victor rightjointmotor, Victor righthandmotor,
 			DigitalInput iscollected) {
 		this.lefthandmotor = lefthandmotor;
 		this.leftjointmotor = leftjointmotor;
@@ -22,8 +22,7 @@ public class Arms extends Subsystem {
 	public Arms() {
 	}
 
-	public Arms(int lefthandport, int leftjointport, int righthandport,
-			int rightjointport, int digitalinputport) {
+	public Arms(int lefthandport, int leftjointport, int righthandport, int rightjointport, int digitalinputport) {
 		righthandmotor = new Victor(righthandport);
 		rightjointmotor = new Victor(rightjointport);
 		lefthandmotor = new Victor(lefthandport);
@@ -48,8 +47,13 @@ public class Arms extends Subsystem {
 		leftjointmotor.set(0);
 	}
 
+	public boolean isclosed() {
+		return iscollected.get();
+	}
+
 	@Override
 	protected void initDefaultCommand() {
+		setDefaultCommand(Commands.stopArms);
 		// TODO Auto-generated method stub
 
 	}
