@@ -32,4 +32,5 @@ public class RobotMap {
 	public static final double MAX_SPEED = 2;
 	public static final double SHOOTING_SYSTEM_ANGLE = 2;
 	public static final double SHOOTING_SYSTEM_HEIGHT = 2;
+	public static final double SHOOTING_TARGET_HEIGHT = 2.2;
 }

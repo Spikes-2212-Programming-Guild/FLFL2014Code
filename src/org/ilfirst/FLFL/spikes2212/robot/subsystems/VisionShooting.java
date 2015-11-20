@@ -25,7 +25,7 @@ public class VisionShooting extends Command {
 	@Override
 	protected void execute() {
 		new Shoot(Util.getShootingSpeed(Camera.getValue(), RobotMap.SHOOTING_SYSTEM_ANGLE,
-				2.2 - RobotMap.SHOOTING_SYSTEM_HEIGHT));
+				RobotMap.SHOOTING_TARGET_HEIGHT - RobotMap.SHOOTING_SYSTEM_HEIGHT));
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
