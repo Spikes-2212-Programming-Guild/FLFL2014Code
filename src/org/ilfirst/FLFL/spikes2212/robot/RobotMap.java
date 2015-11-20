@@ -7,17 +7,25 @@ package org.ilfirst.FLFL.spikes2212.robot;
  * floating around.
  */
 public class RobotMap {
-	public static final int RIGHTFRONTPORT = 1;
-	public static final int LEFTFRONTPORT = 1;
-	public static final int RIGHTREARPORT = 1;
-	public static final int LEFTREARPORT = 1;
-	public static final int SHOOTINGTALONPORT1 = 1;
-	public static final int SHOOTINGTALONPORT2 = 1;
-	public static final int CHARGINGTALONPORT1 = 1;
-	public static final int CHARGINGTALONPORT2 = 1;
-	public static final int RIGHTDRIVERPORT = 2;
-	public static final int LEFTDRIVERPORT = 2;
-	public static final int NAVIGATORPORT = 2;
-	public static final double CHARGINGSPEED = 2;
-
+	public static final int RIGHT_FRONT_PORT = 1;
+	public static final int LEFT_FRONT_PORT = 1;
+	public static final int RIGHT_REAR_PORT = 1;
+	public static final int LEFT_REAR_PORT = 1;
+	public static final int SHOOTING_TALON_PORT_1 = 1;
+	public static final int SHOOTING_TALON_PORT_2 = 1;
+	public static final int CHARGING_TALON_PORT_1 = 1;
+	public static final int CHARGING_TALON_PORT_2 = 1;
+	public static final int RIGHT_DRIVER_PORT = 2;
+	public static final int LEFT_DRIVER_PORT = 2;
+	public static final int NAVIGATOR_PORT = 2;
+	public static final double CHARGING_SPEED = 2;
+	public static final double CLOSE_HANDS_SPEED = 2;
+	public static final double OPEN_HANDS_SPEED = 2;
+	public static final int RIGHT_ARM_HAND_PORT = 2;
+	public static final int RIGHT_ARM_JOINT_PORT = 2;
+	public static final int LEFT_ARM_HAND_PORT = 2;
+	public static final int LEFT_ARM_JOINT_PORT = 2;
+	public static final int ARMS_DIGITALINPUT_PORT = 2;
+	public static final double CLOSE_JOINTS_SPEED = 2;
+	public static final double OPEN_JOINTS_SPEED = 2;
 }

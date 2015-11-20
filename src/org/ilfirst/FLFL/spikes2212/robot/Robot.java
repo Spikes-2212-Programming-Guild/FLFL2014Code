@@ -1,5 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Arms;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
@@ -16,18 +17,23 @@ public class Robot extends IterativeRobot {
 	public static Drivetrain driveTrain;
 	public static Charger charger;
 	public static Gun gun;
+	public static Arms arms;
 
 	@Override
 	public void robotInit() {
-		Gearbox right = new Gearbox(RobotMap.RIGHTFRONTPORT,
-				RobotMap.RIGHTREARPORT);
-		Gearbox left = new Gearbox(RobotMap.LEFTFRONTPORT,
-				RobotMap.LEFTREARPORT);
+		Gearbox right = new Gearbox(RobotMap.RIGHT_FRONT_PORT,
+				RobotMap.RIGHT_REAR_PORT);
+		Gearbox left = new Gearbox(RobotMap.LEFT_FRONT_PORT,
+				RobotMap.LEFT_REAR_PORT);
 		driveTrain = new Drivetrain(left, right);
-		gun = new Gun(RobotMap.SHOOTINGTALONPORT1, RobotMap.SHOOTINGTALONPORT2);
-		charger = new Charger(RobotMap.CHARGINGTALONPORT1,
-				RobotMap.CHARGINGTALONPORT2);
+		gun = new Gun(RobotMap.SHOOTING_TALON_PORT_1,
+				RobotMap.SHOOTING_TALON_PORT_2);
+		charger = new Charger(RobotMap.CHARGING_TALON_PORT_1,
+				RobotMap.CHARGING_TALON_PORT_2);
 		oi = new OI();
+		arms = new Arms(RobotMap.LEFT_ARM_HAND_PORT,
+				RobotMap.LEFT_ARM_JOINT_PORT, RobotMap.RIGHT_ARM_HAND_PORT,
+				RobotMap.RIGHT_ARM_JOINT_PORT, RobotMap.ARMS_DIGITALINPUT_PORT);
 	}
 
 	@Override

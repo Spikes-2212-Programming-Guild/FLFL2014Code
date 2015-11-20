@@ -25,8 +25,8 @@ public class Charger extends Subsystem {
 	}
 
 	public void charge() {
-		t1.set(RobotMap.CHARGINGSPEED);
-		t2.set(RobotMap.CHARGINGSPEED);
+		t1.set(RobotMap.CHARGING_SPEED);
+		t2.set(RobotMap.CHARGING_SPEED);
 	}
 
 	public void stop() {
