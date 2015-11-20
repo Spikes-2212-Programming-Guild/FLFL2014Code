@@ -1,9 +1,9 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gun;
-import org.ilfirst.FLFL.spikes2212.robot.subsystems.Timing;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -14,7 +14,7 @@ public class Robot extends IterativeRobot {
 
 	public static OI oi;
 	public static Drivetrain driveTrain;
-	public static Timing charger;
+	public static Charger charger;
 	public static Gun gun;
 
 	@Override
@@ -25,7 +25,7 @@ public class Robot extends IterativeRobot {
 				RobotMap.LEFTREARPORT);
 		driveTrain = new Drivetrain(left, right);
 		gun = new Gun(RobotMap.SHOOTINGTALONPORT1, RobotMap.SHOOTINGTALONPORT2);
-		charger = new Timing(RobotMap.CHARGINGTALONPORT1,
+		charger = new Charger(RobotMap.CHARGINGTALONPORT1,
 				RobotMap.CHARGINGTALONPORT2);
 		oi = new OI();
 	}

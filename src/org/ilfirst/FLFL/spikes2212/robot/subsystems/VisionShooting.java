@@ -5,9 +5,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class autonomusshooting extends Command {
+public class VisionShooting extends Command {
 
-	public autonomusshooting() {
+	public VisionShooting() {
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
 	}
@@ -39,7 +39,7 @@ public class autonomusshooting extends Command {
 	protected void interrupted() {
 	}
 
-	private double shootingspeed(double distance, double angle, double height) {
+	private double getshootingspeed(double distance, double angle, double height) {
 		double gravity = 9.8;
 		double time = Math.sqrt((2 / gravity)
 				* (distance * Math.tan(angle) - height));

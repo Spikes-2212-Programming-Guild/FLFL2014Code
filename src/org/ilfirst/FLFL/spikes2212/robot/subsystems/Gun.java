@@ -1,5 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
+import org.ilfirst.FLFL.spikes2212.robot.Commands;
+
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -34,8 +36,8 @@ public class Gun extends Subsystem {
 	// Put methods for controlling this subsystem
 	// here. Call these from Commands.
 	@Override
-	public void initDefaultCommand() {
-		// Set the default command for a subsystem here.
+	public void initDefaultCommand() { // Set the default command for a
+		setDefaultCommand(Commands.stopgun);// subsystem here.
 		// setDefaultCommand(new MySpecialCommand());
 	}
 }

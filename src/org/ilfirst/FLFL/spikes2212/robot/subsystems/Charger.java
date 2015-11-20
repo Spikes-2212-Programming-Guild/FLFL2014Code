@@ -1,5 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
+import org.ilfirst.FLFL.spikes2212.robot.Commands;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.TalonSRX;
@@ -8,18 +9,18 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 /**
 *
 */
-public class Timing extends Subsystem {
+public class Charger extends Subsystem {
 	private TalonSRX t1, t2;
 
-	public Timing(TalonSRX t1, TalonSRX t2) {
+	public Charger(TalonSRX t1, TalonSRX t2) {
 		this.t1 = t1;
 		this.t2 = t2;
 	}
 
-	public Timing() {
+	public Charger() {
 	}
 
-	public Timing(int t1port, int t2port) {
+	public Charger(int t1port, int t2port) {
 		this(new TalonSRX(t1port), new TalonSRX(t2port));
 	}
 
@@ -37,6 +38,7 @@ public class Timing extends Subsystem {
 	// here. Call these from Commands.
 	@Override
 	public void initDefaultCommand() {
+		setDefaultCommand(Commands.stopcharger);
 		// Set the default command for a subsystem here.
 		// setDefaultCommand(new MySpecialCommand());
 	}
