@@ -1,4 +1,5 @@
 package org.ilfirst.FLFL.spikes2212.robot;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -6,13 +7,25 @@ package org.ilfirst.FLFL.spikes2212.robot;
  * floating around.
  */
 public class RobotMap {
-    // For example to map the left and right motors, you could define the
-    // following variables to use with your drivetrain subsystem.
-    // public static int leftMotor = 1;
-    // public static int rightMotor = 2;
-    
-    // If you are using multiple modules, make sure to define both the port
-    // number and the module. For example you with a rangefinder:
-    // public static int rangefinderPort = 1;
-    // public static int rangefinderModule = 1;
+	public static final int RIGHT_FRONT_PORT = 1;
+	public static final int LEFT_FRONT_PORT = 1;
+	public static final int RIGHT_REAR_PORT = 1;
+	public static final int LEFT_REAR_PORT = 1;
+	public static final int SHOOTING_TALON_PORT_1 = 1;
+	public static final int SHOOTING_TALON_PORT_2 = 1;
+	public static final int CHARGING_TALON_PORT_1 = 1;
+	public static final int CHARGING_TALON_PORT_2 = 1;
+	public static final int RIGHT_DRIVER_PORT = 2;
+	public static final int LEFT_DRIVER_PORT = 2;
+	public static final int NAVIGATOR_PORT = 2;
+	public static final double CHARGING_SPEED = 2;
+	public static final double CLOSE_HANDS_SPEED = 2;
+	public static final double OPEN_HANDS_SPEED = 2;
+	public static final int RIGHT_ARM_HAND_PORT = 2;
+	public static final int RIGHT_ARM_JOINT_PORT = 2;
+	public static final int LEFT_ARM_HAND_PORT = 2;
+	public static final int LEFT_ARM_JOINT_PORT = 2;
+	public static final int ARMS_DIGITALINPUT_PORT = 2;
+	public static final double CLOSE_JOINTS_SPEED = 2;
+	public static final double OPEN_JOINTS_SPEED = 2;
 }
