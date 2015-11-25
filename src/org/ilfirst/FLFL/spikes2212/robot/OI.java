@@ -1,6 +1,8 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import org.ilfirst.FLFL.spikes2212.robot.commands.Grab;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickTurnOrStraight;
+import org.ilfirst.FLFL.spikes2212.robot.commands.Pull_in;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Reload;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Straight;
@@ -17,6 +19,8 @@ public class OI {
 	JoystickButton trigger = new JoystickButton(Joysticks.rightdriver, 1);
 	JoystickButton shoot = new JoystickButton(Joysticks.navigatorstick, 0);
 	JoystickButton reload = new JoystickButton(Joysticks.navigatorstick, 1);
+	JoystickButton grab =new JoystickButton(Joysticks.navigatorstick, 2);
+	JoystickButton pullin =new JoystickButton(Joysticks.navigatorstick, 3);
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.
@@ -50,5 +54,7 @@ public class OI {
 		trigger.whileHeld(new JoystickTurnOrStraight());
 		new Tank();
 		reload.whenPressed(new Reload());
+		grab.whenPressed(new Grab());
+		pullin.whenPressed(new Pull_in());
 	}
 }

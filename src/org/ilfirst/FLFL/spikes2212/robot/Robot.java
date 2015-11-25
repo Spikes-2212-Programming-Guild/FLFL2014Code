@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.TalonSRX;
+import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -12,6 +13,7 @@ import org.ilfirst.FLFL.spikes2212.robot.subsystems.Timing;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gun;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Grabber;
 
 public class Robot extends IterativeRobot {
 	public static final Gearbox left_gearbox=new Gearbox(RobotMap.GEARBOXLEFTFRONTPORT,RobotMap.GEARBOXLEFTREARPORT);
@@ -19,6 +21,7 @@ public class Robot extends IterativeRobot {
 	public static final Drivetrain drivetrain = new Drivetrain(left_gearbox,  right_gearbox,new DigitalInput(RobotMap.SENSORFRONTPORT));
 	public static final Gun Gun=new Gun(new CANTalon(RobotMap.GUNLEFTPORT) , new CANTalon(RobotMap.GUNRIGHTPORT));
 	public static final Timing Timing=new Timing(new TalonSRX(RobotMap.TIMINGRIGHTPORT),new TalonSRX(RobotMap.TIMINGLEFTPORT));
+	public static final Grabber Grabber=new Grabber(new Victor(0), new Victor(0), new Victor(0), new Victor(0));
 	public static OI oi;
 	 
 
