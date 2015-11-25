@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Pull_in extends Command {
+public class PullIn extends Command {
 
-    public Pull_in() {
+    public PullIn() {
     	requires(Robot.Grabber);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);

@@ -16,15 +16,18 @@ import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gearbox;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Grabber;
 
 public class Robot extends IterativeRobot {
+	// FIXME leftGearbox, rightGearbox, gun, etc...
 	public static final Gearbox left_gearbox=new Gearbox(RobotMap.GEARBOXLEFTFRONTPORT,RobotMap.GEARBOXLEFTREARPORT);
 	public static final Gearbox right_gearbox=new Gearbox(RobotMap.GEARBOXRIGHTFRONTPORT,RobotMap.GEARBOXRIGHTREARPORT);
 	public static final Drivetrain drivetrain = new Drivetrain(left_gearbox,  right_gearbox,new DigitalInput(RobotMap.SENSORFRONTPORT));
 	public static final Gun Gun=new Gun(new CANTalon(RobotMap.GUNLEFTPORT) , new CANTalon(RobotMap.GUNRIGHTPORT));
 	public static final Timing Timing=new Timing(new TalonSRX(RobotMap.TIMINGRIGHTPORT),new TalonSRX(RobotMap.TIMINGLEFTPORT));
+	// FIXME ???
 	public static final Grabber Grabber=new Grabber(new Victor(0), new Victor(0), new Victor(0), new Victor(0));
 	public static OI oi;
 	 
 
+	// FIXME there should be an autonomous command
     Command autonomousCommand;
 
     /**

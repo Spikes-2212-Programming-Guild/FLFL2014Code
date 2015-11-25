@@ -6,6 +6,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 /**
  *
  */
+
+// FIXME This should be split into two separate subsystems
 public class Grabber extends Subsystem {
     private Victor rearLeft, rearRight,frontLeft,frontRight;
     public Grabber(Victor rearLeft , Victor rearRight, Victor frontLeft, Victor frontRight){

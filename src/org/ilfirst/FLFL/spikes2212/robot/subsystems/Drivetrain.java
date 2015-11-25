@@ -1,5 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
+// FIXME unused imports
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Straight;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Tank;
@@ -18,7 +19,7 @@ public class Drivetrain extends Subsystem{
 		this.sensor1=sensor1;
 	}
 	public void straight(double speed) {
-		if(!sensor1.get()){
+		if(!sensor1.get()){ // FIXME explain this to me
 			left.set(speed);
 			right.set(-speed);
 		}

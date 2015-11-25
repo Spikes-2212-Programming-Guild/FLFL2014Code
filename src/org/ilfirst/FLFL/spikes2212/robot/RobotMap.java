@@ -6,6 +6,7 @@ package org.ilfirst.FLFL.spikes2212.robot;
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
  */
+// FIXME variable names should be separated with an underscore _
 public class RobotMap {
 	public static final double SHOOT_SPEED = 1;
 	public static final int RIGHTDRIVERPORT = 1;
@@ -20,7 +21,9 @@ public class RobotMap {
 	public static final int TIMINGRIGHTPORT=1;
 	public static final int TIMINGLEFTPORT=1;
 	public static final int SENSORFRONTPORT=1;
+	// FIXME int?
 	public static final int GRABSPEED=1;
+	// FIXME int?
 	public static final int PULLINSPEED=1;
 
 	
