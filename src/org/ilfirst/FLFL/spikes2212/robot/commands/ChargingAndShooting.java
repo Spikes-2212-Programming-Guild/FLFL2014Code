@@ -7,12 +7,11 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 /**
  *
  */
-public class CloseArms extends CommandGroup {
+public class ChargingAndShooting extends CommandGroup {
 
-	public CloseArms() {
-		addParallel(Commands.ArmsCommands.closeWheels);
-		addParallel(Commands.ArmsCommands.closeHands);
-
+	public ChargingAndShooting() {
+		addParallel(Commands.ChargingCommands.charge);
+		addParallel(Commands.ShootingCommands.joystickShoot);
 		// Add Commands here:
 		// e.g. addSequential(new Command1());
 		// addSequential(new Command2());

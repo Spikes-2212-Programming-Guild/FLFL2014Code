@@ -1,17 +1,16 @@
 package org.ilfirst.FLFL.spikes2212.robot.commands;
 
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
-import org.ilfirst.FLFL.spikes2212.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class OpenJoints extends Command {
+public class Charge extends Command {
 
-	public OpenJoints() {
-		requires(Robot.arms);
+	public Charge() {
+		requires(Robot.charger);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
 	}
@@ -24,7 +23,7 @@ public class OpenJoints extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movejoints(RobotMap.OPEN_JOINTS_SPEED);
+		Robot.charger.charge();
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -36,11 +35,13 @@ public class OpenJoints extends Command {
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
+		Robot.charger.stop();
 	}
 
 	// Called when another command which requires one or more of the same
 	// subsystems is scheduled to run
 	@Override
 	protected void interrupted() {
+		end();
 	}
 }

@@ -2,16 +2,16 @@ package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
 import org.ilfirst.FLFL.spikes2212.robot.Commands;
 
-import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
 *
 */
 public class Gun extends Subsystem {
-	private CANTalon t1, t2;
+	private TalonSRX t1, t2;
 
-	public Gun(CANTalon t1, CANTalon t2) {
+	public Gun(TalonSRX t1, TalonSRX t2) {
 		this.t1 = t1;
 		this.t2 = t2;
 	}
@@ -20,7 +20,7 @@ public class Gun extends Subsystem {
 	}
 
 	public Gun(int t1port, int t2port) {
-		this(new CANTalon(t1port), new CANTalon(t2port));
+		this(new TalonSRX(t1port), new TalonSRX(t2port));
 	}
 
 	public void shoot(double speed) {
@@ -37,7 +37,7 @@ public class Gun extends Subsystem {
 	// here. Call these from Commands.
 	@Override
 	public void initDefaultCommand() { // Set the default command for a
-		setDefaultCommand(Commands.stopGun);// subsystem here.
+		setDefaultCommand(Commands.ShootingCommands.stopGun);// subsystem here.
 		// setDefaultCommand(new MySpecialCommand());
 	}
 }

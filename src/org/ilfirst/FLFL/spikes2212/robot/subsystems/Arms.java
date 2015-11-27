@@ -1,55 +1,68 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
+import org.ilfirst.FLFL.spikes2212.robot.Commands;
+
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Arms extends Subsystem {
-	private Victor righthandmotor, rightjointmotor, lefthandmotor,
-			leftjointmotor;
-	private DigitalInput iscollected;
+	private Victor rightHandMotor, rightGrabMotor, leftHandMotor,
+			leftGrabMotor;
+	private DigitalInput closed, opened;
 
-	public Arms(Victor lefthandmotor, Victor leftjointmotor,
-			Victor rightjointmotor, Victor righthandmotor,
-			DigitalInput iscollected) {
-		this.lefthandmotor = lefthandmotor;
-		this.leftjointmotor = leftjointmotor;
-		this.righthandmotor = righthandmotor;
-		this.rightjointmotor = rightjointmotor;
-		this.iscollected = iscollected;
+	public Arms(Victor leftHandMotor, Victor leftGrabMotor,
+			Victor rightHandMotor, Victor rightGrabMotor, DigitalInput closed,
+			DigitalInput opened) {
+		this.leftHandMotor = leftHandMotor;
+		this.leftGrabMotor = leftGrabMotor;
+		this.rightHandMotor = rightHandMotor;
+		this.rightGrabMotor = rightGrabMotor;
+		this.closed = closed;
+		this.opened = opened;
 	}
 
 	public Arms() {
 	}
 
-	public Arms(int lefthandport, int leftjointport, int righthandport,
-			int rightjointport, int digitalinputport) {
-		righthandmotor = new Victor(righthandport);
-		rightjointmotor = new Victor(rightjointport);
-		lefthandmotor = new Victor(lefthandport);
-		leftjointmotor = new Victor(leftjointport);
-		iscollected = new DigitalInput(digitalinputport);
+	public Arms(int leftHandPort, int leftGrabport, int righthandport,
+			int rightGrabport, int diclosedport, int diopenedport) {
+		rightHandMotor = new Victor(righthandport);
+		rightGrabMotor = new Victor(rightGrabport);
+		leftHandMotor = new Victor(leftHandPort);
+		leftGrabMotor = new Victor(leftGrabport);
+		closed = new DigitalInput(diclosedport);
+		opened = new DigitalInput(diopenedport);
 	}
 
 	public void movehands(double speed) {
-		righthandmotor.set(speed);
-		lefthandmotor.set(-speed);
+		rightHandMotor.set(speed);
+		leftHandMotor.set(speed);
 	}
 
-	public void movejoints(double speed) {
-		rightjointmotor.set(speed);
-		leftjointmotor.set(speed);
+	public void moveWheels(double speed) {
+		rightGrabMotor.set(speed);
+		leftGrabMotor.set(speed);
 	}
 
 	public void stop() {
-		righthandmotor.set(0);
-		rightjointmotor.set(0);
-		lefthandmotor.set(0);
-		leftjointmotor.set(0);
+		rightHandMotor.set(0);
+		rightGrabMotor.set(0);
+		leftHandMotor.set(0);
+		leftGrabMotor.set(0);
+	}
+
+	public boolean isClosed() {
+		return closed.get();
+	}
+
+	public boolean isOpened() {
+		return opened.get();
 	}
 
 	@Override
 	protected void initDefaultCommand() {
+		setDefaultCommand(Commands.ArmsCommands.stopArms);
 		// TODO Auto-generated method stub
 
 	}

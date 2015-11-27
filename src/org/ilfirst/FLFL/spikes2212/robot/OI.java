@@ -7,22 +7,35 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI /* GEVALD */{
-	public static JoystickButton reload = new JoystickButton(
-			JoystickMap.navigatorStick, 3);
-	public static JoystickButton loaded = new JoystickButton(
+	public static JoystickButton charge = new JoystickButton(
 			JoystickMap.navigatorStick, 4);
-	public static JoystickButton forwardorturn = new JoystickButton(
+	public static JoystickButton forwardOrTurn = new JoystickButton(
 			JoystickMap.driverright, 1);
-	public static JoystickButton twosides = new JoystickButton(
+	public static JoystickButton twoSides = new JoystickButton(
 			JoystickMap.driverleft, 1);
-	public static JoystickButton shoottrigger = new JoystickButton(
+	public static JoystickButton closeArms = new JoystickButton(
+			JoystickMap.navigatorStick, 5);
+	public static JoystickButton openArms = new JoystickButton(
+			JoystickMap.navigatorStick, 6);
+	public static JoystickButton shootWithVision = new JoystickButton(
+			JoystickMap.navigatorStick, 2);
+	public static JoystickButton shootFromSameSpot = new JoystickButton(
+			JoystickMap.navigatorStick, 3);
+	public static JoystickButton shootWithJoystick = new JoystickButton(
 			JoystickMap.navigatorStick, 1);
+	public static JoystickButton stopArms = new JoystickButton(
+			JoystickMap.navigatorStick, 8);
 
 	public OI() {
-		reload.whileHeld(Commands.reload);
-		forwardorturn.whileHeld(Commands.joystickStraightOrTurn);
-		twosides.whileHeld(Commands.doubleJoystickDriving);// whileheld or
-															// whenpressed?
-		shoottrigger.whenPressed(Commands.shoot);
+		charge.whileHeld(Commands.ChargingCommands.charge);
+		forwardOrTurn
+				.whileHeld(Commands.DrivingCommands.joystickStraightOrTurn);
+		twoSides.whileHeld(Commands.DrivingCommands.doubleJoystickDriving);
+		closeArms.whenPressed(Commands.ArmsCommands.closeArms);
+		openArms.whenPressed(Commands.ArmsCommands.openHands);
+		shootWithVision.whileHeld(Commands.ShootingCommands.visionShooting);
+		shootFromSameSpot.whileHeld(Commands.ShootingCommands.shoot);
+		shootWithJoystick.whileHeld(Commands.ShootingCommands.joystickShoot);
+		stopArms.whenPressed(Commands.ArmsCommands.stopArms);
 	}
 }

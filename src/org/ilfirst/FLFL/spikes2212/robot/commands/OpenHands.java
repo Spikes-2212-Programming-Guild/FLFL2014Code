@@ -24,23 +24,25 @@ public class OpenHands extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movehands(RobotMap.OPEN_HANDS_SPEED);
+		Robot.arms.movehands(RobotMap.Constants.OPEN_HANDS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
-		return false;
+		return Robot.arms.isOpened();
 	}
 
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
+		Robot.arms.stop();
 	}
 
 	// Called when another command which requires one or more of the same
 	// subsystems is scheduled to run
 	@Override
 	protected void interrupted() {
+		end();
 	}
 }

@@ -1,5 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot.commands;
 
+import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -7,11 +8,12 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Reload extends Command {
+public class JoystickShoot extends Command {
 
-	public Reload() {
-		requires(Robot.charger);
-		// Use requires() here to declare subsystem dependencies
+	public JoystickShoot /* Don't Talk */() {
+
+		requires(Robot.gun);// Use requires() here to declare subsystem
+							// dependencies
 		// eg. requires(chassis);
 	}
 
@@ -23,7 +25,7 @@ public class Reload extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.charger.charge();
+		Robot.gun.shoot(JoystickMap.navigatorStick.getY());
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -35,7 +37,7 @@ public class Reload extends Command {
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
-		Robot.charger.stop();
+		Robot.gun.stop();
 	}
 
 	// Called when another command which requires one or more of the same

@@ -1,6 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
 import org.ilfirst.FLFL.spikes2212.robot.Commands;
+import org.ilfirst.FLFL.spikes2212.robot.util.Gearbox;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -72,7 +73,7 @@ public class Drivetrain extends Subsystem {
 
 	@Override
 	protected void initDefaultCommand() {
-		setDefaultCommand(Commands.joystickArcade);
+		setDefaultCommand(Commands.DrivingCommands.joystickArcade);
 		// TODO Auto-generated method stub}
 	}
 }
