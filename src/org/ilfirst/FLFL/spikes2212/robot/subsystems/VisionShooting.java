@@ -1,6 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
-import org.ilfirst.FLFL.spikes2212.robot.RobotMap;
+import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.commands.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.util.Util;
 
@@ -24,10 +24,8 @@ public class VisionShooting extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		new Shoot(Util.getShootingSpeed(Camera.getValue(),
-				RobotMap.Constants.SHOOTING_SYSTEM_ANGLE,
-				RobotMap.Constants.SHOOTING_TARGET_HEIGHT
-						- RobotMap.Constants.SHOOTING_SYSTEM_HEIGHT));
+		new Shoot(Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
+				Constants.SHOOTING_TARGET_HEIGHT - Constants.SHOOTING_SYSTEM_HEIGHT));
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

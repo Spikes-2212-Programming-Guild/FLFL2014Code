@@ -1,7 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.commands;
 
+import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
-import org.ilfirst.FLFL.spikes2212.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -24,7 +24,7 @@ public class OpenHands extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movehands(RobotMap.Constants.OPEN_HANDS_SPEED);
+		Robot.arms.movehands(Constants.OPEN_HANDS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

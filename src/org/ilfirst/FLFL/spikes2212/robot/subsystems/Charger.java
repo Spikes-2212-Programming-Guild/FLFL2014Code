@@ -1,7 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
 import org.ilfirst.FLFL.spikes2212.robot.Commands;
-import org.ilfirst.FLFL.spikes2212.robot.RobotMap;
+import org.ilfirst.FLFL.spikes2212.robot.Constants;
 
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -25,8 +25,8 @@ public class Charger extends Subsystem {
 	}
 
 	public void charge() {
-		v1.set(RobotMap.Constants.CHARGING_SPEED);
-		v2.set(RobotMap.Constants.CHARGING_SPEED);
+		v1.set(Constants.CHARGING_SPEED);
+		v2.set(Constants.CHARGING_SPEED);
 	}
 
 	public void stop() {

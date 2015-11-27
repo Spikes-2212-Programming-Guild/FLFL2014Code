@@ -42,7 +42,7 @@ public class Commands {
 		public static Shoot shoot;
 
 		public ShootingCommands() {
-			shoot = new Shoot(RobotMap.Constants.SHOOTING_SPEED);
+			shoot = new Shoot(Constants.SHOOTING_SPEED);
 			visionShooting = new VisionShooting();
 			joystickShoot = new JoystickShoot();
 			stopGun = new StopGun();

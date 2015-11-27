@@ -1,7 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.commands;
 
+import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
-import org.ilfirst.FLFL.spikes2212.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -24,7 +24,7 @@ public class CloseWheels extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.moveWheels(RobotMap.Constants.CLOSE_WHEELS_SPEED);
+		Robot.arms.moveWheels(Constants.CLOSE_WHEELS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
