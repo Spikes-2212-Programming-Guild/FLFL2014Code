@@ -1,19 +1,19 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
-import org.ilfirst.FLFL.spikes2212.robot.commands.Charge;
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseHands;
 import org.ilfirst.FLFL.spikes2212.robot.commands.CloseWheels;
-import org.ilfirst.FLFL.spikes2212.robot.commands.DoubleJoystickDriving;
-import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickArcade;
-import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickShoot;
-import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickStraightOrTurn;
 import org.ilfirst.FLFL.spikes2212.robot.commands.OpenHands;
-import org.ilfirst.FLFL.spikes2212.robot.commands.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopCharger;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopDrivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopGun;
+import org.ilfirst.FLFL.spikes2212.robot.commands.charger.Charge;
+import org.ilfirst.FLFL.spikes2212.robot.commands.driving.DoubleJoystickDriving;
+import org.ilfirst.FLFL.spikes2212.robot.commands.driving.JoystickArcade;
+import org.ilfirst.FLFL.spikes2212.robot.commands.driving.JoystickStraightOrTurn;
+import org.ilfirst.FLFL.spikes2212.robot.commands.shooter.JoystickShoot;
+import org.ilfirst.FLFL.spikes2212.robot.commands.shooter.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.VisionShooting;
 
 public class Commands {

@@ -1,7 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
 import org.ilfirst.FLFL.spikes2212.robot.Constants;
-import org.ilfirst.FLFL.spikes2212.robot.commands.Shoot;
+import org.ilfirst.FLFL.spikes2212.robot.commands.shooter.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.util.Util;
 
 import edu.wpi.first.wpilibj.command.Command;

@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands;
+package org.ilfirst.FLFL.spikes2212.robot.commands.driving;
 
 import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
@@ -8,12 +8,11 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class JoystickShoot extends Command {
+public class JoystickArcade extends Command {
 
-	public JoystickShoot /* Don't Talk */() {
-
-		requires(Robot.gun);// Use requires() here to declare subsystem
-							// dependencies
+	public JoystickArcade() {
+		requires(Robot.drivetrain);
+		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
 	}
 
@@ -25,7 +24,8 @@ public class JoystickShoot extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.gun.shoot(JoystickMap.navigatorStick.getY());
+		Robot.drivetrain.arcade(JoystickMap.driverRight.getY(),
+				JoystickMap.driverRight.getX());
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -37,13 +37,11 @@ public class JoystickShoot extends Command {
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
-		Robot.gun.stop();
 	}
 
 	// Called when another command which requires one or more of the same
 	// subsystems is scheduled to run
 	@Override
 	protected void interrupted() {
-		end();
 	}
 }

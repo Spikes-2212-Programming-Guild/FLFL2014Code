@@ -1,5 +1,6 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands;
+package org.ilfirst.FLFL.spikes2212.robot.commands.driving;
 
+import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -7,12 +8,10 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Shoot extends Command {
-	private double speed;
+public class JoystickStraightOrTurn extends Command {
 
-	public Shoot(double speed) {
-		requires(Robot.gun);
-		this.speed = speed;
+	public JoystickStraightOrTurn() {
+		requires(Robot.drivetrain);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
 	}
@@ -25,7 +24,14 @@ public class Shoot extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.gun.shoot(speed);
+		double x = JoystickMap.driverRight.getX();
+		double y = JoystickMap.driverRight.getY();
+		if (x > y)
+			Robot.drivetrain.turn(x);
+		else if (y > x)
+			Robot.drivetrain.forward(y);
+		else
+			Robot.drivetrain.stop();
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -37,13 +43,11 @@ public class Shoot extends Command {
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
-		Robot.gun.stop();
 	}
 
 	// Called when another command which requires one or more of the same
 	// subsystems is scheduled to run
 	@Override
 	protected void interrupted() {
-		end();
 	}
 }

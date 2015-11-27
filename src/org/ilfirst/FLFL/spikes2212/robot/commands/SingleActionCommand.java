@@ -10,10 +10,10 @@ public abstract class SingleActionCommand extends Command {
 
 	@Override
 	protected void initialize() {
-		DoAction();
+		doAction();
 	}
 
-	protected abstract void DoAction();
+	protected abstract void doAction();
 
 	@Override
 	protected void execute() {

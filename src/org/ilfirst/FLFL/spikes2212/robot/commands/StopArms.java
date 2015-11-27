@@ -13,11 +13,8 @@ public class StopArms extends SingleActionCommand {
 		// eg. requires(chassis);
 	}
 
-	// Called just before this Command runs the first time
 	@Override
-	protected void DoAction() {
+	protected void doAction() {
 		Robot.arms.stop();
-		// TODO Auto-generated method stub
-
 	}
 }

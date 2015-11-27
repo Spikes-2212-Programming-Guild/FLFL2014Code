@@ -8,11 +8,11 @@ import org.ilfirst.FLFL.spikes2212.robot.Robot;
 public class StopDrivetrain extends SingleActionCommand {
 
 	public StopDrivetrain() {
-		requires(Robot.driveTrain);
+		requires(Robot.drivetrain);
 	}
 
 	@Override
-	public void DoAction() {
-		Robot.driveTrain.stop();
+	public void doAction() {
+		Robot.drivetrain.stop();
 	}
 }

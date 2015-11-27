@@ -12,12 +12,11 @@ import org.ilfirst.FLFL.spikes2212.robot.util.Gearbox;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends IterativeRobot {
 
 	public static OI oi;
-	public static Drivetrain driveTrain;
+	public static Drivetrain drivetrain;
 	public static Charger charger;
 	public static Gun gun;
 	public static Arms arms;
@@ -26,7 +25,7 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR);
 		Gearbox left = new Gearbox(PWM.LEFT_FRONT, PWM.LEFT_REAR);
-		driveTrain = new Drivetrain(left, right);
+		drivetrain = new Drivetrain(left, right);
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
 		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT);
 		oi = new OI();
@@ -42,8 +41,6 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-		SmartDashboard.putNumber("Right Side Speed", driveTrain.getrightspeed());
-		SmartDashboard.putNumber("Left Side Speed", driveTrain.getleftspeed());
 	}
 
 	@Override
