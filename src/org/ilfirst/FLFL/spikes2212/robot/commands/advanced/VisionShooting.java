@@ -25,8 +25,12 @@ public class VisionShooting extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		new Shoot(Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
-				Constants.SHOOTING_TARGET_HEIGHT - Constants.SHOOTING_SYSTEM_HEIGHT));
+		// FIXME can't work
+		new Shoot(
+				Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
+						Constants.SHOOTING_TARGET_HEIGHT - Constants.SHOOTING_SYSTEM_HEIGHT),
+				Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
+						Constants.SHOOTING_TARGET_HEIGHT - Constants.SHOOTING_SYSTEM_HEIGHT));
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

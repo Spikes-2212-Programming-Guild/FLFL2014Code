@@ -9,12 +9,13 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class Shoot extends Command {
 	private double speed;
+	private double leftVoltage;
+	private double rightVoltage;
 
-	public Shoot(double speed) {
+	public Shoot(double leftVoltage, double rightVoltage) {
 		requires(Robot.gun);
-		this.speed = speed;
-		// Use requires() here to declare subsystem dependencies
-		// eg. requires(chassis);
+		this.leftVoltage = leftVoltage;
+		this.rightVoltage = rightVoltage;
 	}
 
 	// Called just before this Command runs the first time
@@ -25,7 +26,7 @@ public class Shoot extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.gun.shoot(speed);
+		Robot.gun.shoot(leftVoltage, rightVoltage);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

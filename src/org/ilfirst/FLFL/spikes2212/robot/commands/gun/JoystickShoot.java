@@ -1,5 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot.commands.gun;
 
+import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 
@@ -25,7 +26,8 @@ public class JoystickShoot extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.gun.shoot(JoystickMap.navigatorStick.getY());
+		double y = JoystickMap.navigatorStick.getY();
+		Robot.gun.shoot(y * Constants.MAX_LEFT_VOLTAGE, y * Constants.MAX_RIGHT_VOLTAGE);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

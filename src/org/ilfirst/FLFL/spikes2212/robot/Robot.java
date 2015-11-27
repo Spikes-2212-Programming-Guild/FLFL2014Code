@@ -27,14 +27,15 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void robotInit() {
-		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR);
 		Gearbox left = new Gearbox(PWM.LEFT_FRONT, PWM.LEFT_REAR);
+		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR);
 		drivetrain = new Drivetrain(left, right);
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
 		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT);
-		oi = new OI();
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
 		grabber = new Grabber(PWM.GRABBER_LEFT, PWM.GRABBER_RIGHT);
+		oi = new OI();
+
 	}
 
 	@Override

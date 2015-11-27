@@ -11,4 +11,7 @@ public class Constants {
 	public static final double SHOOTING_SYSTEM_HEIGHT = 2;
 	public static final double SHOOTING_TARGET_HEIGHT = 2.2;
 	public static final double SHOOTING_SPEED = 2;
+	public static final double MAX_LEFT_VOLTAGE = 12;
+	public static final double MAX_RIGHT_VOLTAGE = 12;
+
 }

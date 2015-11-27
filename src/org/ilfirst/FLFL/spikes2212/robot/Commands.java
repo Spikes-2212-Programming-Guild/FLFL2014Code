@@ -48,7 +48,7 @@ public class Commands {
 		public static Shoot shoot;
 
 		public static void init() {
-			shoot = new Shoot(Constants.SHOOTING_SPEED);
+			shoot = new Shoot(Constants.MAX_LEFT_VOLTAGE, Constants.MAX_RIGHT_VOLTAGE);
 			visionShooting = new VisionShooting();
 			joystickShoot = new JoystickShoot();
 			stopGun = new StopGun();
