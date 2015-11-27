@@ -26,12 +26,13 @@ public class JoystickStraightOrTurn extends Command {
 	protected void execute() {
 		double x = JoystickMap.driverRight.getX();
 		double y = JoystickMap.driverRight.getY();
-		if (x > y)
+		if (Math.abs(x) > Math.abs(y)) {
 			Robot.drivetrain.turn(x);
-		else if (y > x)
+		} else if (Math.abs(y) > Math.abs(x)) {
 			Robot.drivetrain.forward(y);
-		else
+		} else {
 			Robot.drivetrain.stop();
+		}
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
