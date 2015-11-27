@@ -8,12 +8,10 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class CloseWheels extends Command {
+public class OpenArms extends Command {
 
-	public CloseWheels() {
+	public OpenArms() {
 		requires(Robot.arms);
-		// Use requires() here to declare subsystem dependencies
-		// eg. requires(chassis);
 	}
 
 	// Called just before this Command runs the first time
@@ -24,13 +22,13 @@ public class CloseWheels extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.moveWheels(Constants.CLOSE_WHEELS_SPEED);
+		Robot.arms.set(Constants.OPEN_HANDS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
-		return Robot.arms.isClosed();
+		return Robot.arms.isOpen();
 	}
 
 	// Called once after isFinished returns true

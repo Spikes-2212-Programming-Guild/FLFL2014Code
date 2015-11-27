@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands;
+package org.ilfirst.FLFL.spikes2212.robot.commands.grabber;
 
 import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class OpenHands extends Command {
+public class Grab extends Command {
 
-	public OpenHands() {
+	public Grab() {
 		requires(Robot.arms);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
@@ -24,19 +24,18 @@ public class OpenHands extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movehands(Constants.OPEN_HANDS_SPEED);
+		Robot.grabber.grab(Constants.CLOSE_WHEELS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
-		return Robot.arms.isOpened();
+		return false;
 	}
 
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
-		Robot.arms.stop();
 	}
 
 	// Called when another command which requires one or more of the same

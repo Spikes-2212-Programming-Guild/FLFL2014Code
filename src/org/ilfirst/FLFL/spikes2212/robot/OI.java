@@ -32,7 +32,7 @@ public class OI /* GEVALD */{
 				.whileHeld(Commands.DrivingCommands.joystickStraightOrTurn);
 		twoSides.whileHeld(Commands.DrivingCommands.doubleJoystickDriving);
 		closeArms.whenPressed(Commands.ArmsCommands.closeArms);
-		openArms.whenPressed(Commands.ArmsCommands.openHands);
+		openArms.whenPressed(Commands.ArmsCommands.openArms);
 		shootWithVision.whileHeld(Commands.ShootingCommands.visionShooting);
 		shootFromSameSpot.whileHeld(Commands.ShootingCommands.shoot);
 		shootWithJoystick.whileHeld(Commands.ShootingCommands.joystickShoot);

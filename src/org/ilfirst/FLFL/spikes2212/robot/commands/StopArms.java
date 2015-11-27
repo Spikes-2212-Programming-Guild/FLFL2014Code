@@ -9,8 +9,6 @@ public class StopArms extends SingleActionCommand {
 
 	public StopArms() {
 		requires(Robot.arms);
-		// Use requires() here to declare subsystem dependencies
-		// eg. requires(chassis);
 	}
 
 	@Override

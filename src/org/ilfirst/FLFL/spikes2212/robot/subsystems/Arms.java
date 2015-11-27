@@ -7,63 +7,41 @@ import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Arms extends Subsystem {
-	private Victor rightHandMotor, rightGrabMotor, leftHandMotor,
-			leftGrabMotor;
-	private DigitalInput closed, opened;
+	private Victor left, right;
+	private DigitalInput open, closed;
 
-	public Arms(Victor leftHandMotor, Victor leftGrabMotor,
-			Victor rightHandMotor, Victor rightGrabMotor, DigitalInput closed,
-			DigitalInput opened) {
-		this.leftHandMotor = leftHandMotor;
-		this.leftGrabMotor = leftGrabMotor;
-		this.rightHandMotor = rightHandMotor;
-		this.rightGrabMotor = rightGrabMotor;
+	public Arms(Victor leftMotor, Victor rightMotor, DigitalInput open, DigitalInput closed) {
+		this.left = leftMotor;
+		this.right = rightMotor;
+		this.open = open;
 		this.closed = closed;
-		this.opened = opened;
 	}
 
-	public Arms() {
+	public Arms(int leftMotorChannel, int rightMotorChannel, int openSwitchChannel, int closedSwitchChannel) {
+		this(new Victor(leftMotorChannel), new Victor(rightMotorChannel), new DigitalInput(openSwitchChannel),
+				new DigitalInput(closedSwitchChannel));
 	}
 
-	public Arms(int leftHandPort, int leftGrabport, int righthandport,
-			int rightGrabport, int diclosedport, int diopenedport) {
-		rightHandMotor = new Victor(righthandport);
-		rightGrabMotor = new Victor(rightGrabport);
-		leftHandMotor = new Victor(leftHandPort);
-		leftGrabMotor = new Victor(leftGrabport);
-		closed = new DigitalInput(diclosedport);
-		opened = new DigitalInput(diopenedport);
-	}
-
-	public void movehands(double speed) {
-		rightHandMotor.set(speed);
-		leftHandMotor.set(speed);
-	}
-
-	public void moveWheels(double speed) {
-		rightGrabMotor.set(speed);
-		leftGrabMotor.set(speed);
+	public void set(double speed) {
+		left.set(speed);
+		right.set(-speed);
 	}
 
 	public void stop() {
-		rightHandMotor.set(0);
-		rightGrabMotor.set(0);
-		leftHandMotor.set(0);
-		leftGrabMotor.set(0);
+		set(0);
+	}
+
+	public boolean isOpen() {
+		return open.get();
 	}
 
 	public boolean isClosed() {
 		return closed.get();
 	}
 
-	public boolean isOpened() {
-		return opened.get();
-	}
-
 	@Override
 	protected void initDefaultCommand() {
 		setDefaultCommand(Commands.ArmsCommands.stopArms);
-		// TODO Auto-generated method stub
 
 	}
 

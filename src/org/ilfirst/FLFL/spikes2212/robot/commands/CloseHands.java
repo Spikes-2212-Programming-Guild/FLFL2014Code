@@ -24,7 +24,7 @@ public class CloseHands extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movehands(Constants.CLOSE_HANDS_SPEED);
+		Robot.arms.set(Constants.CLOSE_HANDS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
