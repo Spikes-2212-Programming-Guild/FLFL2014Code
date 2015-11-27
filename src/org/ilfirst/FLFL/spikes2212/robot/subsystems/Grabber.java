@@ -15,4 +15,8 @@ public class Grabber {
 		right.set(-speed);
 	}
 
+	public void stop() {
+		grab(0);
+	}
+
 }

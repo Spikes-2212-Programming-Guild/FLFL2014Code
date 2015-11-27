@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands;
+package org.ilfirst.FLFL.spikes2212.robot.commands.advanced;
 
 import org.ilfirst.FLFL.spikes2212.robot.Commands;
 
@@ -7,11 +7,11 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 /**
  *
  */
-public class CloseArms extends CommandGroup {
+public class CloseAndGrab extends CommandGroup {
 
-	public CloseArms() {
+	public CloseAndGrab() {
 		addParallel(Commands.ArmsCommands.grab);
-		addParallel(Commands.ArmsCommands.closeHands);
+		addParallel(Commands.ArmsCommands.closeArms);
 
 		// Add Commands here:
 		// e.g. addSequential(new Command1());

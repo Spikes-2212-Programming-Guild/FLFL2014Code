@@ -1,5 +1,6 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands.shooter;
+package org.ilfirst.FLFL.spikes2212.robot.commands.arms;
 
+import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -7,12 +8,10 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class Shoot extends Command {
-	private double speed;
+public class CloseArms extends Command {
 
-	public Shoot(double speed) {
-		requires(Robot.gun);
-		this.speed = speed;
+	public CloseArms() {
+		requires(Robot.arms);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
 	}
@@ -25,19 +24,19 @@ public class Shoot extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.gun.shoot(speed);
+		Robot.arms.set(Constants.CLOSE_HANDS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
-		return false;
+		return Robot.arms.isClosed();
 	}
 
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
-		Robot.gun.stop();
+		Robot.arms.stop();
 	}
 
 	// Called when another command which requires one or more of the same

@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands;
+package org.ilfirst.FLFL.spikes2212.robot.commands.arms;
 
 import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
@@ -8,12 +8,10 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class CloseHands extends Command {
+public class OpenArms extends Command {
 
-	public CloseHands() {
+	public OpenArms() {
 		requires(Robot.arms);
-		// Use requires() here to declare subsystem dependencies
-		// eg. requires(chassis);
 	}
 
 	// Called just before this Command runs the first time
@@ -24,13 +22,13 @@ public class CloseHands extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.set(Constants.CLOSE_HANDS_SPEED);
+		Robot.arms.set(Constants.OPEN_HANDS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
-		return Robot.arms.isClosed();
+		return Robot.arms.isOpen();
 	}
 
 	// Called once after isFinished returns true

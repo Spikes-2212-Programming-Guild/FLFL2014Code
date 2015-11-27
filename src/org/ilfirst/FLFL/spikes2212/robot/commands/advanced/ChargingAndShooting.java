@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands;
+package org.ilfirst.FLFL.spikes2212.robot.commands.advanced;
 
 import org.ilfirst.FLFL.spikes2212.robot.Commands;
 

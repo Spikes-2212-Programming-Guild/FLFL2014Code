@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands.shooter;
+package org.ilfirst.FLFL.spikes2212.robot.commands.gun;
 
 import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
