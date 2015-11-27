@@ -8,13 +8,13 @@ import org.ilfirst.FLFL.spikes2212.robot.commands.DoubleJoystickDriving;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickArcade;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.JoystickStraightOrTurn;
-import org.ilfirst.FLFL.spikes2212.robot.commands.OpenArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.OpenHands;
-import org.ilfirst.FLFL.spikes2212.robot.commands.OpenJoints;
+import org.ilfirst.FLFL.spikes2212.robot.commands.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopCharger;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopDrivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.commands.StopGun;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.VisionShooting;
 
 public class Commands {
 	public static JoystickArcade joystickArcade;
@@ -28,10 +28,10 @@ public class Commands {
 	public static CloseJoints closeJoints;
 	public static CloseHands closeHands;
 	public static OpenHands openHands;
-	public static OpenJoints openJoints;
 	public static StopArms stopArms;
 	public static CloseArms closeArms;
-	public static OpenArms openArms;
+	public static VisionShooting visionShooting;
+	public static Shoot shoot;
 
 	public Commands() {
 		joystickArcade = new JoystickArcade();
@@ -45,9 +45,9 @@ public class Commands {
 		closeHands = new CloseHands();
 		closeJoints = new CloseJoints();
 		openHands = new OpenHands();
-		openJoints = new OpenJoints();
 		stopArms = new StopArms();
 		closeArms = new CloseArms();
-		openArms = new OpenArms();
+		visionShooting = new VisionShooting();
+		shoot = new Shoot(RobotMap.Constants.SHOOTING_SPEED);
 	}
 }

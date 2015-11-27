@@ -24,7 +24,7 @@ public class CloseJoints extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movejoints(RobotMap.CLOSE_JOINTS_SPEED);
+		Robot.arms.movejoints(RobotMap.Constants.CLOSE_JOINTS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

@@ -21,19 +21,22 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void robotInit() {
-		Gearbox right = new Gearbox(RobotMap.RIGHT_FRONT_PORT,
-				RobotMap.RIGHT_REAR_PORT);
-		Gearbox left = new Gearbox(RobotMap.LEFT_FRONT_PORT,
-				RobotMap.LEFT_REAR_PORT);
+		Gearbox right = new Gearbox(RobotMap.PWM.RIGHT_FRONT_PORT,
+				RobotMap.PWM.RIGHT_REAR_PORT);
+		Gearbox left = new Gearbox(RobotMap.PWM.LEFT_FRONT_PORT,
+				RobotMap.PWM.LEFT_REAR_PORT);
 		driveTrain = new Drivetrain(left, right);
-		gun = new Gun(RobotMap.SHOOTING_TALON_PORT_1,
-				RobotMap.SHOOTING_TALON_PORT_2);
-		charger = new Charger(RobotMap.CHARGING_TALON_PORT_1,
-				RobotMap.CHARGING_TALON_PORT_2);
+		gun = new Gun(RobotMap.PWM.SHOOTING_PORT_1,
+				RobotMap.PWM.SHOOTING_PORT_2);
+		charger = new Charger(RobotMap.PWM.CHARGING_PORT_1,
+				RobotMap.PWM.CHARGING_PORT_2);
 		oi = new OI();
-		arms = new Arms(RobotMap.LEFT_ARM_HAND_PORT,
-				RobotMap.LEFT_ARM_JOINT_PORT, RobotMap.RIGHT_ARM_HAND_PORT,
-				RobotMap.RIGHT_ARM_JOINT_PORT, RobotMap.ARMS_DIGITALINPUT_PORT);
+		arms = new Arms(RobotMap.PWM.LEFT_ARM_HAND_PORT,
+				RobotMap.PWM.LEFT_ARM_JOINT_PORT,
+				RobotMap.PWM.RIGHT_ARM_HAND_PORT,
+				RobotMap.PWM.RIGHT_ARM_JOINT_PORT,
+				RobotMap.ARMS_CLOSE_DIGITALINPUT_PORT,
+				RobotMap.ARMS_OPEN_DIGITALINPUT_PORT);
 	}
 
 	@Override

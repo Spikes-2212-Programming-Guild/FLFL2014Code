@@ -24,13 +24,13 @@ public class CloseHands extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movehands(RobotMap.CLOSE_HANDS_SPEED);
+		Robot.arms.movehands(RobotMap.Constants.CLOSE_HANDS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
 	@Override
 	protected boolean isFinished() {
-		return Robot.arms.isclosed();
+		return Robot.arms.isClosed();
 	}
 
 	// Called once after isFinished returns true
