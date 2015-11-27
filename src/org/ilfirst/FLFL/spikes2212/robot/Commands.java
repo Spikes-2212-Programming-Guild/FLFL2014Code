@@ -1,6 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
 import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.CloseAndGrab;
+import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.VisionShooting;
 import org.ilfirst.FLFL.spikes2212.robot.commands.arms.CloseArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.arms.OpenArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.arms.StopArms;
@@ -15,7 +16,6 @@ import org.ilfirst.FLFL.spikes2212.robot.commands.grabber.StopGrabber;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.JoystickShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.StopGun;
-import org.ilfirst.FLFL.spikes2212.robot.subsystems.VisionShooting;
 
 public class Commands {
 

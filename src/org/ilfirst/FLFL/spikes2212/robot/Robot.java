@@ -4,6 +4,7 @@ import org.ilfirst.FLFL.spikes2212.robot.RobotMap.CAN;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.DIO;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.PWM;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Arms;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Camera;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Grabber;
@@ -22,6 +23,7 @@ public class Robot extends IterativeRobot {
 	public static Gun gun;
 	public static Arms arms;
 	public static Grabber grabber;
+	public static Camera camera;
 
 	@Override
 	public void robotInit() {
