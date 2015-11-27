@@ -27,15 +27,15 @@ public class OI /* GEVALD */{
 			JoystickMap.navigatorStick, 8);
 
 	public OI() {
-		charge.whileHeld(Commands.charge);
-		forwardOrTurn.whileHeld(Commands.joystickStraightOrTurn);
-		twoSides.whileHeld(Commands.doubleJoystickDriving);// whileheld or //
-															// whenpressed?
-		closeArms.whenPressed(Commands.closeArms);
-		openArms.whenPressed(Commands.openHands);
-		shootWithVision.whileHeld(Commands.visionShooting);
-		shootFromSameSpot.whileHeld(Commands.shoot);
-		shootWithJoystick.whileHeld(Commands.joystickShoot);
-		stopArms.whenPressed(Commands.stopArms);
+		charge.whileHeld(Commands.ChargingCommands.charge);
+		forwardOrTurn
+				.whileHeld(Commands.DrivingCommands.joystickStraightOrTurn);
+		twoSides.whileHeld(Commands.DrivingCommands.doubleJoystickDriving);
+		closeArms.whenPressed(Commands.ArmsCommands.closeArms);
+		openArms.whenPressed(Commands.ArmsCommands.openHands);
+		shootWithVision.whileHeld(Commands.ShootingCommands.visionShooting);
+		shootFromSameSpot.whileHeld(Commands.ShootingCommands.shoot);
+		shootWithJoystick.whileHeld(Commands.ShootingCommands.joystickShoot);
+		stopArms.whenPressed(Commands.ArmsCommands.stopArms);
 	}
 }

@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class CloseJoints extends Command {
+public class CloseWheels extends Command {
 
-	public CloseJoints() {
+	public CloseWheels() {
 		requires(Robot.arms);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
@@ -24,7 +24,7 @@ public class CloseJoints extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.movejoints(RobotMap.Constants.CLOSE_JOINTS_SPEED);
+		Robot.arms.moveWheels(RobotMap.Constants.CLOSE_WHEELS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

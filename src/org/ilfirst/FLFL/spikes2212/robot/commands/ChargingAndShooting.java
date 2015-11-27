@@ -10,8 +10,8 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class ChargingAndShooting extends CommandGroup {
 
 	public ChargingAndShooting() {
-		addParallel(Commands.charge);
-		addParallel(Commands.joystickShoot);
+		addParallel(Commands.ChargingCommands.charge);
+		addParallel(Commands.ShootingCommands.joystickShoot);
 		// Add Commands here:
 		// e.g. addSequential(new Command1());
 		// addSequential(new Command2());
