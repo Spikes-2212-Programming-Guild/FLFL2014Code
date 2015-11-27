@@ -6,11 +6,12 @@ import org.ilfirst.FLFL.spikes2212.robot.commands.arms.OpenArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.arms.StopArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.Charge;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.StopCharger;
-import org.ilfirst.FLFL.spikes2212.robot.commands.driving.DoubleJoystickDriving;
-import org.ilfirst.FLFL.spikes2212.robot.commands.driving.JoystickArcade;
-import org.ilfirst.FLFL.spikes2212.robot.commands.driving.JoystickStraightOrTurn;
-import org.ilfirst.FLFL.spikes2212.robot.commands.driving.StopDrivetrain;
+import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.DoubleJoystickDriving;
+import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.JoystickArcade;
+import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.JoystickStraightOrTurn;
+import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.StopDrivetrain;
 import org.ilfirst.FLFL.spikes2212.robot.commands.grabber.Grab;
+import org.ilfirst.FLFL.spikes2212.robot.commands.grabber.StopGrabber;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.JoystickShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.Shoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.StopGun;
@@ -18,16 +19,21 @@ import org.ilfirst.FLFL.spikes2212.robot.subsystems.VisionShooting;
 
 public class Commands {
 
-	public Commands() {
+	public static void init() {
+		Drivetrain.init();
+		Gun.init();
+		Charger.init();
+		Arms.init();
+		Grabber.init();
 	}
 
-	public static class DrivingCommands {
+	public static class Drivetrain {
 		public static JoystickArcade joystickArcade;
 		public static JoystickStraightOrTurn joystickStraightOrTurn;
 		public static DoubleJoystickDriving doubleJoystickDriving;
 		public static StopDrivetrain stopDrivetrain;
 
-		public DrivingCommands() {
+		public static void init() {
 			joystickStraightOrTurn = new JoystickStraightOrTurn();
 			doubleJoystickDriving = new DoubleJoystickDriving();
 			stopDrivetrain = new StopDrivetrain();
@@ -35,13 +41,13 @@ public class Commands {
 		}
 	}
 
-	public static class ShootingCommands {
+	public static class Gun {
 		public static JoystickShoot joystickShoot;
 		public static StopGun stopGun;
 		public static VisionShooting visionShooting;
 		public static Shoot shoot;
 
-		public ShootingCommands() {
+		public static void init() {
 			shoot = new Shoot(Constants.SHOOTING_SPEED);
 			visionShooting = new VisionShooting();
 			joystickShoot = new JoystickShoot();
@@ -49,30 +55,38 @@ public class Commands {
 		}
 	}
 
-	public static class ChargingCommands {
+	public static class Charger {
 		public static Charge charge;
 		public static StopCharger stopCharger;
 
-		public ChargingCommands() {
+		public static void init() {
 			stopCharger = new StopCharger();
 			charge = new Charge();
 		}
 	}
 
-	public static class ArmsCommands {
-		public static Grab grab;
+	public static class Arms {
 		public static CloseArms closeArms;
 		public static OpenArms openArms;
 		public static StopArms stopArms;
 		public static CloseAndGrab closeAndGrab;
 
-		public ArmsCommands() {
-			grab = new Grab();
+		public static void init() {
 			closeArms = new CloseArms();
 			openArms = new OpenArms();
 			closeAndGrab = new CloseAndGrab();
 			stopArms = new StopArms();
-
 		}
 	}
+
+	public static class Grabber {
+		public static StopGrabber stopGrabber;
+		public static Grab grab;
+
+		public static void init() {
+			grab = new Grab();
+			stopGrabber = new StopGrabber();
+		}
+	}
+
 }

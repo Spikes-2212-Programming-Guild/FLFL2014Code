@@ -1,8 +1,11 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
-import edu.wpi.first.wpilibj.Victor;
+import org.ilfirst.FLFL.spikes2212.robot.commands.grabber.StopGrabber;
 
-public class Grabber {
+import edu.wpi.first.wpilibj.Victor;
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+public class Grabber extends Subsystem {
 	private Victor left, right;
 
 	public Grabber(int leftChannel, int rightChannel) {
@@ -17,6 +20,11 @@ public class Grabber {
 
 	public void stop() {
 		grab(0);
+	}
+
+	@Override
+	protected void initDefaultCommand() {
+		setDefaultCommand(new StopGrabber());
 	}
 
 }

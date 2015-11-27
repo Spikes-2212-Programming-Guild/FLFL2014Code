@@ -1,6 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
-import org.ilfirst.FLFL.spikes2212.robot.Commands;
+import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.JoystickArcade;
 import org.ilfirst.FLFL.spikes2212.robot.util.Gearbox;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -49,13 +49,8 @@ public class Drivetrain extends Subsystem {
 	}
 
 	public void setTwoSides(double leftSpeed, double rightSpeed) {
-		left.set(-leftSpeed);
-		right.set(rightSpeed);
-	}
-
-	public void doublejoystickdriving(double leftspeed, double rightspeed) {
-		right.set(rightspeed);
-		left.set(leftspeed);
+		left.set(leftSpeed);
+		right.set(-rightSpeed);
 	}
 
 	public void stop() {
@@ -63,17 +58,9 @@ public class Drivetrain extends Subsystem {
 		left.stop();
 	}
 
-	public double getrightspeed() {
-		return right.getvalue();
-	}
-
-	public double getleftspeed() {
-		return left.getvalue();
-	}
-
 	@Override
 	protected void initDefaultCommand() {
-		setDefaultCommand(Commands.DrivingCommands.joystickArcade);
+		setDefaultCommand(new JoystickArcade());
 		// TODO Auto-generated method stub}
 	}
 }

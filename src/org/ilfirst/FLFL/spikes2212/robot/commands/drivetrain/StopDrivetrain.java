@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands.driving;
+package org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain;
 
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.SingleActionCommand;

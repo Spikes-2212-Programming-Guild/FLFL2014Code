@@ -1,6 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
-import org.ilfirst.FLFL.spikes2212.robot.Commands;
+import org.ilfirst.FLFL.spikes2212.robot.commands.arms.StopArms;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Victor;
@@ -41,7 +41,7 @@ public class Arms extends Subsystem {
 
 	@Override
 	protected void initDefaultCommand() {
-		setDefaultCommand(Commands.ArmsCommands.stopArms);
+		setDefaultCommand(new StopArms());
 
 	}
 

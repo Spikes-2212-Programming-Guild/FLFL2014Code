@@ -1,6 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.commands.advanced;
 
-import org.ilfirst.FLFL.spikes2212.robot.Commands;
+import org.ilfirst.FLFL.spikes2212.robot.commands.charger.Charge;
+import org.ilfirst.FLFL.spikes2212.robot.commands.gun.JoystickShoot;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
@@ -10,8 +11,8 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class ChargingAndShooting extends CommandGroup {
 
 	public ChargingAndShooting() {
-		addParallel(Commands.ChargingCommands.charge);
-		addParallel(Commands.ShootingCommands.joystickShoot);
+		addParallel(new Charge());
+		addParallel(new JoystickShoot());
 		// Add Commands here:
 		// e.g. addSequential(new Command1());
 		// addSequential(new Command2());

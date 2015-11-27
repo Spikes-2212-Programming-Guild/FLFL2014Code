@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands.driving;
+package org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain;
 
 import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
@@ -24,8 +24,7 @@ public class DoubleJoystickDriving extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.drivetrain.doublejoystickdriving(JoystickMap.driverLeft.getY(),
-				JoystickMap.driverRight.getY());
+		Robot.drivetrain.setTwoSides(JoystickMap.driverLeft.getY(), JoystickMap.driverRight.getY());
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

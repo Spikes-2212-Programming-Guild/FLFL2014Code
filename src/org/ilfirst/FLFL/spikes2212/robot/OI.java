@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 public class OI /* GEVALD */{
 	public static JoystickButton charge = new JoystickButton(
 			JoystickMap.navigatorStick, 4);
-	public static JoystickButton forwardOrTurn = new JoystickButton(
+	public static JoystickButton StraightOrTurn = new JoystickButton(
 			JoystickMap.driverRight, 1);
 	public static JoystickButton twoSides = new JoystickButton(
 			JoystickMap.driverLeft, 1);
@@ -27,15 +27,15 @@ public class OI /* GEVALD */{
 			JoystickMap.navigatorStick, 8);
 
 	public OI() {
-		charge.whileHeld(Commands.ChargingCommands.charge);
-		forwardOrTurn
-				.whileHeld(Commands.DrivingCommands.joystickStraightOrTurn);
-		twoSides.whileHeld(Commands.DrivingCommands.doubleJoystickDriving);
-		closeArms.whenPressed(Commands.ArmsCommands.closeAndGrab);
-		openArms.whenPressed(Commands.ArmsCommands.openArms);
-		shootWithVision.whileHeld(Commands.ShootingCommands.visionShooting);
-		shootFromSameSpot.whileHeld(Commands.ShootingCommands.shoot);
-		shootWithJoystick.whileHeld(Commands.ShootingCommands.joystickShoot);
-		stopArms.whenPressed(Commands.ArmsCommands.stopArms);
+		charge.whileHeld(Commands.Charger.charge);
+		StraightOrTurn
+				.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
+		twoSides.whileHeld(Commands.Drivetrain.doubleJoystickDriving);
+		closeArms.whenPressed(Commands.Arms.closeAndGrab);
+		openArms.whenPressed(Commands.Arms.openArms);
+		shootWithVision.whileHeld(Commands.Gun.visionShooting);
+		shootFromSameSpot.whileHeld(Commands.Gun.shoot);
+		shootWithJoystick.whileHeld(Commands.Gun.joystickShoot);
+		stopArms.whenPressed(Commands.Arms.stopArms);
 	}
 }

@@ -1,4 +1,4 @@
-package org.ilfirst.FLFL.spikes2212.robot.commands.driving;
+package org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain;
 
 import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class JoystickStraightOrTurn extends Command {
+public class JoystickArcade extends Command {
 
-	public JoystickStraightOrTurn() {
+	public JoystickArcade() {
 		requires(Robot.drivetrain);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
@@ -24,14 +24,8 @@ public class JoystickStraightOrTurn extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		double x = JoystickMap.driverRight.getX();
-		double y = JoystickMap.driverRight.getY();
-		if (x > y)
-			Robot.drivetrain.turn(x);
-		else if (y > x)
-			Robot.drivetrain.forward(y);
-		else
-			Robot.drivetrain.stop();
+		Robot.drivetrain.arcade(JoystickMap.driverRight.getY(),
+				JoystickMap.driverRight.getX());
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

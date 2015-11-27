@@ -1,7 +1,7 @@
 package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 
-import org.ilfirst.FLFL.spikes2212.robot.Commands;
 import org.ilfirst.FLFL.spikes2212.robot.Constants;
+import org.ilfirst.FLFL.spikes2212.robot.commands.charger.StopCharger;
 
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -38,7 +38,7 @@ public class Charger extends Subsystem {
 	// here. Call these from Commands.
 	@Override
 	public void initDefaultCommand() {
-		setDefaultCommand(Commands.ChargingCommands.stopCharger);
+		setDefaultCommand(new StopCharger());
 		// Set the default command for a subsystem here.
 		// setDefaultCommand(new MySpecialCommand());
 	}
