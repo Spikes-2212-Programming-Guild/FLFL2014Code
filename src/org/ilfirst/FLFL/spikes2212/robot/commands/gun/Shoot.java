@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Shoot extends Command {
-	private double speed;
 	private double leftVoltage;
 	private double rightVoltage;
 
