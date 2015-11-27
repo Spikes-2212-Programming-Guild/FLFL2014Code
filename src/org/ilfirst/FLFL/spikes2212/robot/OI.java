@@ -10,9 +10,9 @@ public class OI /* GEVALD */{
 	public static JoystickButton charge = new JoystickButton(
 			JoystickMap.navigatorStick, 4);
 	public static JoystickButton forwardOrTurn = new JoystickButton(
-			JoystickMap.driverright, 1);
+			JoystickMap.driverRight, 1);
 	public static JoystickButton twoSides = new JoystickButton(
-			JoystickMap.driverleft, 1);
+			JoystickMap.driverLeft, 1);
 	public static JoystickButton closeArms = new JoystickButton(
 			JoystickMap.navigatorStick, 5);
 	public static JoystickButton openArms = new JoystickButton(
