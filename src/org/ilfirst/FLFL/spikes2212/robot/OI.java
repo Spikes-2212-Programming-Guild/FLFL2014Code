@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI /* GEVALD */{
 	public static JoystickButton charge = new JoystickButton(
-			JoystickMap.navigatorStick, 1);
+			JoystickMap.navigatorStick, 4);
 	public static JoystickButton forwardOrTurn = new JoystickButton(
 			JoystickMap.driverright, 1);
 	public static JoystickButton twoSides = new JoystickButton(
@@ -21,6 +21,10 @@ public class OI /* GEVALD */{
 			JoystickMap.navigatorStick, 2);
 	public static JoystickButton shootFromSameSpot = new JoystickButton(
 			JoystickMap.navigatorStick, 3);
+	public static JoystickButton shootWithJoystick = new JoystickButton(
+			JoystickMap.navigatorStick, 1);
+	public static JoystickButton stopArms = new JoystickButton(
+			JoystickMap.navigatorStick, 8);
 
 	public OI() {
 		charge.whileHeld(Commands.charge);
@@ -31,5 +35,7 @@ public class OI /* GEVALD */{
 		openArms.whenPressed(Commands.openHands);
 		shootWithVision.whileHeld(Commands.visionShooting);
 		shootFromSameSpot.whileHeld(Commands.shoot);
+		shootWithJoystick.whileHeld(Commands.joystickShoot);
+		stopArms.whenPressed(Commands.stopArms);
 	}
 }
