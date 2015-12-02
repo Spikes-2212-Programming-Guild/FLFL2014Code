@@ -12,10 +12,8 @@ public class Gearbox {
 		this.rear = rear;
 	}
 
-	public Gearbox(int frontPort, int rearPort, int leftporta, int leftportb, int rightporta, int rightportb) {
+	public Gearbox(int frontPort, int rearPort) {
 		this(new Talon(frontPort), new Talon(rearPort));
-		this.left = new Encoder(leftporta, leftportb, false);
-		this.right = new Encoder(rightporta, rightportb, false);
 	}
 
 	public void set(double speed) {

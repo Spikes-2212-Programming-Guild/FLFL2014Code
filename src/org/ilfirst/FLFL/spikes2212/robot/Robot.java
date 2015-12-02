@@ -27,8 +27,7 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void robotInit() {
-		Gearbox left = new Gearbox(PWM.LEFT_FRONT, PWM.LEFT_REAR, DIO.LEFT_PORT_A, DIO.LEFT_PORT_B, DIO.RIGHT_PORT_A,
-				DIO.RIGHT_PORT_B);
+		Gearbox left = new Gearbox(PWM.LEFT_FRONT, PWM.LEFT_REAR);
 		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR);
 		drivetrain = new Drivetrain(left, right);
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
