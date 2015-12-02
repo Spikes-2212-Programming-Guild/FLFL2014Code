@@ -54,8 +54,8 @@ public class Drivetrain extends Subsystem {
 	}
 
 	public void stop() {
-		right.stop();
 		left.stop();
+		right.stop();
 	}
 
 	@Override

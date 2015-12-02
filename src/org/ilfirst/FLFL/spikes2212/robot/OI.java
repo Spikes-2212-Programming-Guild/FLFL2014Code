@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 public class OI /* GEVALD */{
 	public static JoystickButton charge = new JoystickButton(
 			JoystickMap.navigatorStick, 4);
-	public static JoystickButton StraightOrTurn = new JoystickButton(
+	public static JoystickButton straightOrTurn = new JoystickButton(
 			JoystickMap.driverRight, 1);
 	public static JoystickButton twoSides = new JoystickButton(
 			JoystickMap.driverLeft, 1);
@@ -28,7 +28,7 @@ public class OI /* GEVALD */{
 
 	public OI() {
 		charge.whileHeld(Commands.Charger.charge);
-		StraightOrTurn
+		straightOrTurn
 				.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
 		twoSides.whileHeld(Commands.Drivetrain.doubleJoystickDriving);
 		closeArms.whenPressed(Commands.Arms.closeAndGrab);
