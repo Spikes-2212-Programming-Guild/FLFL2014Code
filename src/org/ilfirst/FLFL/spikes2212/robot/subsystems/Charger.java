@@ -3,25 +3,22 @@ package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.StopCharger;
 
-import edu.wpi.first.wpilibj.Victor;
+import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
 *
 */
 public class Charger extends Subsystem {
-	private Victor v1, v2;
+	private VictorSP v1, v2;
 
-	public Charger(Victor v1, Victor v2) {
+	public Charger(VictorSP v1, VictorSP v2) {
 		this.v1 = v1;
 		this.v2 = v2;
 	}
 
-	public Charger() {
-	}
-
 	public Charger(int v1port, int v2port) {
-		this(new Victor(v1port), new Victor(v2port));
+		this(new VictorSP(v1port), new VictorSP(v2port));
 	}
 
 	public void charge() {
