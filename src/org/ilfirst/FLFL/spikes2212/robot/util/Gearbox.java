@@ -1,17 +1,21 @@
 package org.ilfirst.FLFL.spikes2212.robot.util;
 
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Talon;
 
 public class Gearbox {
 	private Talon front, rear;
+	Encoder left, right;
 
 	public Gearbox(Talon front, Talon rear) {
 		this.front = front;
 		this.rear = rear;
 	}
 
-	public Gearbox(int frontPort, int rearPort) {
+	public Gearbox(int frontPort, int rearPort, int leftporta, int leftportb, int rightporta, int rightportb) {
 		this(new Talon(frontPort), new Talon(rearPort));
+		this.left = new Encoder(leftporta, leftportb, false);
+		this.right = new Encoder(rightporta, rightportb, false);
 	}
 
 	public void set(double speed) {

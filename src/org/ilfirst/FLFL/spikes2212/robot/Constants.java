@@ -13,8 +13,10 @@ public class Constants {
 	public static final double SHOOTING_SPEED = 2;
 	public static final double MAX_LEFT_VOLTAGE = 12;
 	public static final double MAX_RIGHT_VOLTAGE = 12;
-	
+
 	public static final double LEFT_VOLTAGE_PER_VELOCITY = 0;
 	public static final double RIGHT_VOLTAGE_PER_VELOCITY = 0;
+	public static final double RIGHT_AOTUNUMUS_VELOCITY = 0;
+	public static final double LEFT_AOTUNUMUS_VELOCITY = 0;
 
 }
