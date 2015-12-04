@@ -5,17 +5,20 @@ import edu.wpi.first.wpilibj.Talon;
 
 public class Gearbox {
 	private Talon front, rear;
-	Encoder left, right;
+	Encoder frontEncoder, rearEncoder;
 
 	public Gearbox(Talon front, Talon rear) {
 		this.front = front;
 		this.rear = rear;
 	}
 
-	public Gearbox(int frontPort, int rearPort, int leftporta, int leftportb, int rightporta, int rightportb) {
+	public Gearbox(int frontPort, int rearPort, int encoderFrontPortA,
+			int EncoderFrontPortB, int encoderRearPortA, int encoderRearPortB) {
 		this(new Talon(frontPort), new Talon(rearPort));
-		this.left = new Encoder(leftporta, leftportb, false);
-		this.right = new Encoder(rightporta, rightportb, false);
+		this.frontEncoder = new Encoder(encoderFrontPortA, EncoderFrontPortB,
+				false);
+		this.rearEncoder = new Encoder(encoderRearPortA, encoderRearPortB,
+				false);
 	}
 
 	public void set(double speed) {

@@ -37,10 +37,14 @@ public class RobotMap {
 		public static final int ARMS_OPEN = 0;
 		public static final int ARMS_CLOSED = 1;
 		public static final int BALLS_DETECTOR = 2;
-		public static final int LEFT_PORT_A = 0;
-		public static final int LEFT_PORT_B = 0;
-		public static final int RIGHT_PORT_A = 0;
-		public static final int RIGHT_PORT_B = 0;
+		public static final int GEARBOX_LEFT_ENCODER_FRONT_PORT_A = 0;
+		public static final int GEARBOX_LEFT_ENCODER_FRONT_PORT_B = 0;
+		public static final int GEARBOX_LEFT_ENCODER_REAR_PORT_A = 0;
+		public static final int GEARBOX_LEFT_ENCODER_REAR_PORT_B = 0;
+		public static final int GEARBOX_RIGHT_ENCODER_FRONT_PORT_A = 0;
+		public static final int GEARBOX_RIGHT_ENCODER_FRONT_PORT_B = 0;
+		public static final int GEARBOX_RIGHT_ENCODER_REAR_PORT_A = 0;
+		public static final int GEARBOX_RIGHT_ENCODER_REAR_PORT_B = 0;
 	}
 
 }

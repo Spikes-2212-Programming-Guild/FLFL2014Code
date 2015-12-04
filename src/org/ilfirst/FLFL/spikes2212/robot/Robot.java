@@ -27,13 +27,21 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void robotInit() {
-		Gearbox left = new Gearbox(PWM.LEFT_FRONT, PWM.LEFT_REAR, DIO.LEFT_PORT_A, DIO.LEFT_PORT_B, DIO.RIGHT_PORT_A,
-				DIO.RIGHT_PORT_B);
-		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR);
+		Gearbox left = new Gearbox(PWM.LEFT_FRONT, PWM.LEFT_REAR,
+				DIO.GEARBOX_LEFT_ENCODER_FRONT_PORT_A,
+				DIO.GEARBOX_LEFT_ENCODER_FRONT_PORT_B,
+				DIO.GEARBOX_LEFT_ENCODER_REAR_PORT_A,
+				DIO.GEARBOX_LEFT_ENCODER_REAR_PORT_B);
+		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR,
+				DIO.GEARBOX_RIGHT_ENCODER_FRONT_PORT_A,
+				DIO.GEARBOX_RIGHT_ENCODER_FRONT_PORT_B,
+				DIO.GEARBOX_RIGHT_ENCODER_REAR_PORT_A,
+				DIO.GEARBOX_RIGHT_ENCODER_REAR_PORT_B);
 		drivetrain = new Drivetrain(left, right);
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
 		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT);
-		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
+		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED,
+				DIO.ARMS_OPEN);
 		grabber = new Grabber(PWM.GRABBER_LEFT, PWM.GRABBER_RIGHT);
 		oi = new OI();
 
