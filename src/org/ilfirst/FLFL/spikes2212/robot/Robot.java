@@ -1,5 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import org.ilfirst.FLFL.spikes2212.robot.RobotMap.ANI;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.CAN;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.DIO;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.PWM;
@@ -38,7 +39,8 @@ public class Robot extends IterativeRobot {
 				DIO.GEARBOX_RIGHT_ENCODER_REAR_PORT_A,
 				DIO.GEARBOX_RIGHT_ENCODER_REAR_PORT_B);
 		drivetrain = new Drivetrain(left, right);
-		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
+		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT,
+				ANI.GUN_LEFT_SENSOR_PORT, ANI.GUN_RIGHT_SENSOR_PORT);
 		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT);
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED,
 				DIO.ARMS_OPEN);

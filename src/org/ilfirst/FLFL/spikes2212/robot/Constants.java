@@ -18,5 +18,5 @@ public class Constants {
 	public static final double RIGHT_VOLTAGE_PER_VELOCITY = 0;
 	public static final double RIGHT_AOTUNUMUS_VELOCITY = 0;
 	public static final double LEFT_AOTUNUMUS_VELOCITY = 0;
-
+	public static final double MAGNETIC_CONSTANS = 0;
 }

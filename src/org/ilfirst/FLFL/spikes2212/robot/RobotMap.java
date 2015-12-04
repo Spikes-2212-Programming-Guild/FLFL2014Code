@@ -47,4 +47,9 @@ public class RobotMap {
 		public static final int GEARBOX_RIGHT_ENCODER_REAR_PORT_B = 0;
 	}
 
+	public static class ANI {
+		public static final int GUN_LEFT_SENSOR_PORT = 0;
+		public static final int GUN_RIGHT_SENSOR_PORT = 0;
+	}
+
 }
