@@ -9,22 +9,22 @@ package org.ilfirst.FLFL.spikes2212.robot;
 public class RobotMap {
 
 	public static class PWM {
-		public static final int LEFT_FRONT = 0;
-		public static final int LEFT_REAR = 1;
-		public static final int RIGHT_FRONT = 8;
-		public static final int RIGHT_REAR = 9;
-		public static final int LOADER_LEFT = 2;
-		public static final int LOADER_RIGHT = 3;
-		public static final int ARM_LEFT = 4;
+		public static final int LEFT_FRONT = 3;
+		public static final int LEFT_REAR = 2;
+		public static final int RIGHT_FRONT = 0;
+		public static final int RIGHT_REAR = 1;
+		public static final int LOADER_LEFT = 9;
+		public static final int LOADER_RIGHT = 8;
+		public static final int ARM_LEFT = 7;
 		public static final int ARM_RIGHT = 5;
 		public static final int GRABBER_LEFT = 6;
-		public static final int GRABBER_RIGHT = 7;
+		public static final int GRABBER_RIGHT = 4;
 
 	}
 
 	public static class CAN {
-		public static final int SHOOTER_LEFT = 1;
-		public static final int SHOOTER_RIGHT = 2;
+		public static final int SHOOTER_LEFT = 0;
+		public static final int SHOOTER_RIGHT = 1;
 	}
 
 	public static class Joysticks {

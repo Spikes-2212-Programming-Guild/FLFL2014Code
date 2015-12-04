@@ -10,16 +10,19 @@ public class Arms extends Subsystem {
 	private Victor left, right;
 	private DigitalInput open, closed;
 
-	public Arms(Victor leftMotor, Victor rightMotor, DigitalInput open, DigitalInput closed) {
+	public Arms(Victor leftMotor, Victor rightMotor, DigitalInput open,
+			DigitalInput closed) {
 		this.left = leftMotor;
 		this.right = rightMotor;
 		this.open = open;
 		this.closed = closed;
 	}
 
-	public Arms(int leftMotorChannel, int rightMotorChannel, int openSwitchChannel, int closedSwitchChannel) {
-		this(new Victor(leftMotorChannel), new Victor(rightMotorChannel), new DigitalInput(openSwitchChannel),
-				new DigitalInput(closedSwitchChannel));
+	public Arms(int leftMotorChannel, int rightMotorChannel,
+			int openSwitchChannel, int closedSwitchChannel) {
+		this(new Victor(leftMotorChannel), new Victor(rightMotorChannel),
+				new DigitalInput(openSwitchChannel), new DigitalInput(
+						closedSwitchChannel));
 	}
 
 	public void set(double speed) {

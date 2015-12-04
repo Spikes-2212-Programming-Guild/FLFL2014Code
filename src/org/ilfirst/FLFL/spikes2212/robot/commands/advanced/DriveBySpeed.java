@@ -19,7 +19,8 @@ public class DriveBySpeed extends Command {
 	@Override
 	protected void execute() {
 		// TODO Auto-generated method stub
-		Robot.drivetrain.setTwoSides(Constants.LEFT_AOTUNUMUS_VELOCITY, Constants.RIGHT_AOTUNUMUS_VELOCITY);
+		Robot.drivetrain.setTwoSides(Constants.LEFT_AOTUNUMUS_VELOCITY,
+				Constants.RIGHT_AOTUNUMUS_VELOCITY);
 	}
 
 	@Override

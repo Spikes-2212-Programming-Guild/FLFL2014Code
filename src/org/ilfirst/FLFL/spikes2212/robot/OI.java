@@ -28,8 +28,7 @@ public class OI /* GEVALD */{
 
 	public OI() {
 		charge.whileHeld(Commands.Charger.charge);
-		straightOrTurn
-				.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
+		straightOrTurn.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
 		twoSides.whileHeld(Commands.Drivetrain.doubleJoystickDriving);
 		closeArms.whenPressed(Commands.Arms.closeAndGrab);
 		openArms.whenPressed(Commands.Arms.openArms);
