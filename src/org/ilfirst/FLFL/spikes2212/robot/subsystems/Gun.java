@@ -36,17 +36,17 @@ public class Gun extends Subsystem {
 		right.set(-rightVoltage);
 	}
 
-	public int getLeftRows() {
-		int counter = 0;
-		if (encoderLeft./*function(i don't no which)*/ == Constants.MAGNETIC_CONSTANS) {
+	public float getLeftRows() {
+		float counter = 0;
+		if (encoderLeft.getValue() == Constants.MAGNETIC_CONSTANS) {
 			counter++;
 		}
 		return counter;
 	}
 
-	public int getRightRows() {
-		int counter = 0;
-		if (encoderRight./*function(i don't no which)*/ == Constants.MAGNETIC_CONSTANS) {
+	public float getRightRows() {
+		float counter = 0;
+		if (encoderRight.getValue() == Constants.MAGNETIC_CONSTANS) {
 			counter++;
 		}
 		return counter;
