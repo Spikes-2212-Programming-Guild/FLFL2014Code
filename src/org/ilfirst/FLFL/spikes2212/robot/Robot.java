@@ -3,6 +3,7 @@ package org.ilfirst.FLFL.spikes2212.robot;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.CAN;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.DIO;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.PWM;
+import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.DriveAndShoot;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Arms;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Camera;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
@@ -12,6 +13,7 @@ import org.ilfirst.FLFL.spikes2212.robot.util.Gearbox;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
@@ -24,6 +26,7 @@ public class Robot extends IterativeRobot {
 	public static Arms arms;
 	public static Camera camera;
 	public static PowerDistributionPanel pdp;
+	public static Command autonomousCommand;
 
 	@Override
 	public void robotInit() {
@@ -35,7 +38,15 @@ public class Robot extends IterativeRobot {
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
 		oi = new OI();
 		pdp = new PowerDistributionPanel();
+		autonomousCommand = new DriveAndShoot();
 		Commands.init();
+	}
+
+	@Override
+	public void autonomousInit() {
+		if (autonomousCommand != null) {
+			autonomousCommand.start();
+		}
 	}
 
 	@Override
