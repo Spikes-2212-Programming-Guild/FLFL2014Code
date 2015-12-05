@@ -13,6 +13,7 @@ public class OI /* GEVALD */ {
 	public static JoystickButton closeAndGrab = new JoystickButton(JoystickMap.navigatorStick, 5);
 	public static JoystickButton openArms = new JoystickButton(JoystickMap.navigatorStick, 6);
 	public static JoystickButton shootWithVision = new JoystickButton(JoystickMap.navigatorStick, 2);
+	public static JoystickButton grab = new JoystickButton(JoystickMap.navigatorStick, 9);
 	public static JoystickButton shootHigh = new JoystickButton(JoystickMap.navigatorStick, 3);
 	public static JoystickButton shootDynamic = new JoystickButton(JoystickMap.navigatorStick, 10);
 	public static JoystickButton shootWithJoystick = new JoystickButton(JoystickMap.navigatorStick, 1);
@@ -20,15 +21,16 @@ public class OI /* GEVALD */ {
 
 	public OI() {
 		charge.whileHeld(Commands.Charger.charge);
-		straightOrTurn.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
+		// straightOrTurn.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
 		twoSides.whileHeld(Commands.Drivetrain.doubleJoystickDriving);
-		closeAndGrab.whenPressed(Commands.Arms.closeAndGrab);
+		closeAndGrab.whenPressed(Commands.Arms.closeArms);
 		openArms.whenPressed(Commands.Arms.openArms);
-		shootWithVision.whileHeld(Commands.Gun.visionShooting);
-		shootHigh.whenPressed(Commands.Gun.shootHigh);
+		grab.whenPressed(Commands.Grabber.grab);
+		// shootWithVision.whileHeld(Commands.Gun.visionShooting);
+		// shootHigh.whenPressed(Commands.Gun.shootHigh);
 		shootDynamic.whenPressed(Commands.Gun.shootDynamic);
-		shootWithJoystick.whileHeld(Commands.Gun.focusedJoystickShoot);
-		stopArms.whenPressed(Commands.Arms.stopArms);
+		// shootWithJoystick.whileHeld(Commands.Gun.focusedJoystickShoot);
+		// stopArms.whenPressed(Commands.Arms.stopArms);
 	}
 
 }
