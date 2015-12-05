@@ -22,7 +22,7 @@ public class OI /* GEVALD */ {
 	public OI() {
 		charge.whileHeld(Commands.Charger.charge);
 		// straightOrTurn.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
-		twoSides.whileHeld(Commands.Drivetrain.doubleJoystickDriving);
+		// twoSides.whileHeld(Commands.Drivetrain.doubleJoystickDriving);
 		closeAndGrab.whenPressed(Commands.Arms.closeArms);
 		openArms.whenPressed(Commands.Arms.openArms);
 		grab.whenPressed(Commands.Grabber.grab);
