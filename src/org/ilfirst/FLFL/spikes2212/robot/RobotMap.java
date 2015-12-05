@@ -17,6 +17,8 @@ public class RobotMap {
 		public static final int LOADER_RIGHT = 3;
 		public static final int ARM_LEFT = 4;
 		public static final int ARM_RIGHT = 5;
+		public static final int GRABBER_LEFT = 6;
+		public static final int GRABBER_RIGHT = 7;
 
 	}
 

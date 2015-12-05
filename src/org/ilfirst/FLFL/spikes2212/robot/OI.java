@@ -10,7 +10,7 @@ public class OI /* GEVALD */ {
 	public static JoystickButton charge = new JoystickButton(JoystickMap.navigatorStick, 4);
 	public static JoystickButton straightOrTurn = new JoystickButton(JoystickMap.driverRight, 1);
 	public static JoystickButton twoSides = new JoystickButton(JoystickMap.driverLeft, 1);
-	public static JoystickButton closeArms = new JoystickButton(JoystickMap.navigatorStick, 5);
+	public static JoystickButton closeAndGrab = new JoystickButton(JoystickMap.navigatorStick, 5);
 	public static JoystickButton openArms = new JoystickButton(JoystickMap.navigatorStick, 6);
 	public static JoystickButton shootWithVision = new JoystickButton(JoystickMap.navigatorStick, 2);
 	public static JoystickButton shootHigh = new JoystickButton(JoystickMap.navigatorStick, 3);
@@ -22,7 +22,7 @@ public class OI /* GEVALD */ {
 		charge.whileHeld(Commands.Charger.charge);
 		straightOrTurn.whileHeld(Commands.Drivetrain.joystickStraightOrTurn);
 		twoSides.whileHeld(Commands.Drivetrain.doubleJoystickDriving);
-		closeArms.whenPressed(Commands.Arms.closeArms);
+		closeAndGrab.whenPressed(Commands.Arms.closeAndGrab);
 		openArms.whenPressed(Commands.Arms.openArms);
 		shootWithVision.whileHeld(Commands.Gun.visionShooting);
 		shootHigh.whenPressed(Commands.Gun.shootHigh);

@@ -1,5 +1,6 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
+import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.CloseAndGrab;
 import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.VisionShooting;
 import org.ilfirst.FLFL.spikes2212.robot.commands.arms.CloseArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.arms.OpenArms;
@@ -10,6 +11,8 @@ import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.DoubleJoystickDrivi
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.JoystickArcade;
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.JoystickStraightOrTurn;
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.StopDrivetrain;
+import org.ilfirst.FLFL.spikes2212.robot.commands.grabber.Grab;
+import org.ilfirst.FLFL.spikes2212.robot.commands.grabber.StopGrabber;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.FocusedShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.JoystickFocusedShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.JoystickShoot;
@@ -26,6 +29,7 @@ public class Commands {
 		Gun.init();
 		Charger.init();
 		Arms.init();
+		Grabber.init();
 	}
 
 	public static class Drivetrain {
@@ -83,6 +87,7 @@ public class Commands {
 
 	public static class Arms {
 		public static CloseArms closeArms;
+		public static CloseAndGrab closeAndGrab;
 		public static OpenArms openArms;
 		public static StopArms stopArms;
 
@@ -93,6 +98,16 @@ public class Commands {
 			closeArms = new CloseArms();
 			openArms = new OpenArms();
 			stopArms = new StopArms();
+		}
+	}
+
+	public static class Grabber {
+		public static Grab grab;
+		public static StopGrabber stopGrabber;
+
+		public static void init() {
+			grab = new Grab();
+			stopGrabber = new StopGrabber();
 		}
 	}
 

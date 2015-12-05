@@ -8,6 +8,7 @@ import org.ilfirst.FLFL.spikes2212.robot.subsystems.Arms;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Camera;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Drivetrain;
+import org.ilfirst.FLFL.spikes2212.robot.subsystems.Grabber;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Gun;
 import org.ilfirst.FLFL.spikes2212.robot.util.Gearbox;
 
@@ -26,6 +27,7 @@ public class Robot extends IterativeRobot {
 	public static Arms arms;
 	public static Camera camera;
 	public static PowerDistributionPanel pdp;
+	public static Grabber grabber;
 	public static Command autonomousCommand;
 
 	@Override
@@ -34,6 +36,7 @@ public class Robot extends IterativeRobot {
 		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR);
 		drivetrain = new Drivetrain(left, right);
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
+		grabber = new Grabber(PWM.GRABBER_LEFT, PWM.GRABBER_RIGHT);
 		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT, DIO.BALLS_DETECTOR);
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
 		oi = new OI();
