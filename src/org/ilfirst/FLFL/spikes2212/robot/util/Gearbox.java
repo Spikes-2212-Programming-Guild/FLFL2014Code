@@ -1,11 +1,9 @@
 package org.ilfirst.FLFL.spikes2212.robot.util;
 
-import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Talon;
 
 public class Gearbox {
 	private Talon front, rear;
-	Encoder left, right;
 
 	public Gearbox(Talon front, Talon rear) {
 		this.front = front;

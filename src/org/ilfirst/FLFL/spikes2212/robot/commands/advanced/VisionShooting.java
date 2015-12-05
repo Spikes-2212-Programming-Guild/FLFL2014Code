@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class VisionShooting extends Command {
-
+	
 	public VisionShooting() {
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
@@ -27,9 +27,9 @@ public class VisionShooting extends Command {
 	protected void execute() {
 		// FIXME can't work
 		new Shoot(
-				Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
+				Constants.LEFT_VOLTAGE_PER_VELOCITY * Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
 						Constants.SHOOTING_TARGET_HEIGHT - Constants.SHOOTING_SYSTEM_HEIGHT),
-				Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
+				Constants.RIGHT_VOLTAGE_PER_VELOCITY * Util.getShootingSpeed(Camera.getValue(), Constants.SHOOTING_SYSTEM_ANGLE,
 						Constants.SHOOTING_TARGET_HEIGHT - Constants.SHOOTING_SYSTEM_HEIGHT));
 	}
 

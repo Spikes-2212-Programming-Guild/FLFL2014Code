@@ -3,35 +3,32 @@ package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 import org.ilfirst.FLFL.spikes2212.robot.Constants;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.StopCharger;
 
-import edu.wpi.first.wpilibj.Victor;
+import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
 *
 */
 public class Charger extends Subsystem {
-	private Victor v1, v2;
+	private VictorSP left, right;
 
-	public Charger(Victor v1, Victor v2) {
-		this.v1 = v1;
-		this.v2 = v2;
+	public Charger(VictorSP left, VictorSP right) {
+		this.left = left;
+		this.right = right;
 	}
 
-	public Charger() {
-	}
-
-	public Charger(int v1port, int v2port) {
-		this(new Victor(v1port), new Victor(v2port));
+	public Charger(int leftPort, int rightPort) {
+		this(new VictorSP(leftPort), new VictorSP(rightPort));
 	}
 
 	public void charge() {
-		v1.set(Constants.CHARGING_SPEED);
-		v2.set(Constants.CHARGING_SPEED);
+		left.set(Constants.CHARGING_SPEED);
+		right.set(-Constants.CHARGING_SPEED);
 	}
 
 	public void stop() {
-		v1.set(0);
-		v2.set(0);
+		left.set(0);
+		right.set(0);
 	}
 
 	// Put methods for controlling this subsystem

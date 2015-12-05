@@ -17,8 +17,6 @@ public class RobotMap {
 		public static final int LOADER_RIGHT = 3;
 		public static final int ARM_LEFT = 4;
 		public static final int ARM_RIGHT = 5;
-		public static final int GRABBER_LEFT = 6;
-		public static final int GRABBER_RIGHT = 7;
 
 	}
 
@@ -37,10 +35,6 @@ public class RobotMap {
 		public static final int ARMS_OPEN = 0;
 		public static final int ARMS_CLOSED = 1;
 		public static final int BALLS_DETECTOR = 2;
-		public static final int LEFT_PORT_A = 0;
-		public static final int LEFT_PORT_B = 0;
-		public static final int RIGHT_PORT_A = 0;
-		public static final int RIGHT_PORT_B = 0;
 	}
 
 }

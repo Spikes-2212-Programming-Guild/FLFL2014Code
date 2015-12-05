@@ -8,9 +8,10 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class Shoot extends Command {
+	
 	private double leftVoltage;
 	private double rightVoltage;
-
+	
 	public Shoot(double leftVoltage, double rightVoltage) {
 		requires(Robot.gun);
 		this.leftVoltage = leftVoltage;
