@@ -37,4 +37,10 @@ public class RobotMap {
 		public static final int BALLS_DETECTOR = 2;
 	}
 
+	public static class AnalogInput {
+		public static final int LEFT_COUNTER = 0;
+		public static final int RIGHT_COUNTER = 0;
+
+	}
+
 }

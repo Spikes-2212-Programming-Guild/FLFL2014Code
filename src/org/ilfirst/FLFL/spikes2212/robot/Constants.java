@@ -25,4 +25,6 @@ public class Constants {
 
 	public static final double SHOOT_HIGH_VOLTAGE = 12;
 	public static final double SHOOT_DYNAMIC_VOLTAGE = 3;
+	public static final double TRIGGER_LOWER_VOLTAGE = 0.2;
+	public static final double TRIGGER_HIGHER_VOLTAGE = 0.8;
 }
