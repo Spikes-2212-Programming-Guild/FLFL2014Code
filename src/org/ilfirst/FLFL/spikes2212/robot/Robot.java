@@ -55,6 +55,13 @@ public class Robot extends IterativeRobot {
 	}
 
 	@Override
+	public void teleopInit() {
+		if (autonomousCommand != null) {
+			autonomousCommand.cancel();
+		}
+	}
+
+	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 	}
