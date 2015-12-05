@@ -7,17 +7,15 @@ import edu.wpi.first.wpilibj.command.Command;
 public class DriveBySpeedAndTime extends Command {
 
 	private double speed;
-	private double time;
-	
-	public DriveBySpeedAndTime(double speed, double time) {
+
+	public DriveBySpeedAndTime(double speed, double timeout) {
+		super(timeout);
 		requires(Robot.drivetrain);
 		this.speed = speed;
-		this.time = time;
 	}
 
 	@Override
 	protected void initialize() {
-		setTimeout(time);
 	}
 
 	@Override
