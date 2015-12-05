@@ -31,7 +31,7 @@ public class Robot extends IterativeRobot {
 		Gearbox right = new Gearbox(PWM.RIGHT_FRONT, PWM.RIGHT_REAR);
 		drivetrain = new Drivetrain(left, right);
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
-		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT);
+		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT, DIO.BALLS_DETECTOR);
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
 		oi = new OI();
 		pdp = new PowerDistributionPanel();

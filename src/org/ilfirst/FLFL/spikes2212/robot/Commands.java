@@ -10,6 +10,7 @@ import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.DoubleJoystickDrivi
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.JoystickArcade;
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.JoystickStraightOrTurn;
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.StopDrivetrain;
+import org.ilfirst.FLFL.spikes2212.robot.commands.gun.FocusedShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.JoystickFocusedShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.JoystickShoot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.Shoot;
@@ -50,6 +51,8 @@ public class Commands {
 		public static VisionShooting visionShooting;
 		public static Shoot shoot;
 		public static JoystickFocusedShoot focusedJoystickShoot;
+		public static FocusedShoot shootHigh;
+		public static FocusedShoot shootDynamic;
 
 		private Gun() {
 		}
@@ -59,6 +62,8 @@ public class Commands {
 			visionShooting = new VisionShooting();
 			joystickShoot = new JoystickShoot();
 			stopGun = new StopGun();
+			shootHigh = new FocusedShoot(Constants.SHOOT_HIGH_VOLTAGE);
+			shootDynamic = new FocusedShoot(Constants.SHOOT_DYNAMIC_VOLTAGE);
 			focusedJoystickShoot = new JoystickFocusedShoot();
 		}
 	}

@@ -13,7 +13,8 @@ public class OI /* GEVALD */ {
 	public static JoystickButton closeArms = new JoystickButton(JoystickMap.navigatorStick, 5);
 	public static JoystickButton openArms = new JoystickButton(JoystickMap.navigatorStick, 6);
 	public static JoystickButton shootWithVision = new JoystickButton(JoystickMap.navigatorStick, 2);
-	public static JoystickButton shootFromSameSpot = new JoystickButton(JoystickMap.navigatorStick, 3);
+	public static JoystickButton shootHigh = new JoystickButton(JoystickMap.navigatorStick, 3);
+	public static JoystickButton shootDynamic = new JoystickButton(JoystickMap.navigatorStick, 3);
 	public static JoystickButton shootWithJoystick = new JoystickButton(JoystickMap.navigatorStick, 1);
 	public static JoystickButton stopArms = new JoystickButton(JoystickMap.navigatorStick, 8);
 	public static JoystickButton overrideVoltageLimiter = new JoystickButton(JoystickMap.navigatorStick, 9);
@@ -25,6 +26,8 @@ public class OI /* GEVALD */ {
 		closeArms.whenPressed(Commands.Arms.closeArms);
 		openArms.whenPressed(Commands.Arms.openArms);
 		shootWithVision.whileHeld(Commands.Gun.visionShooting);
+		shootHigh.whenPressed(Commands.Gun.shootHigh);
+		shootDynamic.whenPressed(Commands.Gun.shootDynamic);
 		shootWithJoystick.whileHeld(Commands.Gun.focusedJoystickShoot);
 		stopArms.whenPressed(Commands.Arms.stopArms);
 	}
