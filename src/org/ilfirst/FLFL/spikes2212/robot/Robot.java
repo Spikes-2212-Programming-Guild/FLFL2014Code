@@ -3,7 +3,6 @@ package org.ilfirst.FLFL.spikes2212.robot;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.CAN;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.DIO;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.PWM;
-import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.DriveAndShoot;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Arms;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Camera;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
@@ -41,7 +40,7 @@ public class Robot extends IterativeRobot {
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
 		oi = new OI();
 		pdp = new PowerDistributionPanel();
-		autonomousCommand = new DriveAndShoot();
+		// autonomousCommand = new DriveAndShoot();
 		Commands.init();
 	}
 
