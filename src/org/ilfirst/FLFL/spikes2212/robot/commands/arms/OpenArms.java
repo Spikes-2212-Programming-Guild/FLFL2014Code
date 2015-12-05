@@ -22,7 +22,7 @@ public class OpenArms extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.arms.set(Constants.OPEN_HANDS_SPEED);
+		Robot.arms.set(Constants.OPEN_ARMS_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

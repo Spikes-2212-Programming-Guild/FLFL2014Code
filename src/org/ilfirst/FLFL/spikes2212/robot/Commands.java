@@ -29,7 +29,7 @@ public class Commands {
 		Gun.init();
 		Charger.init();
 		Arms.init();
-		Grabber.init();
+		// Grabber.init();
 	}
 
 	public static class Drivetrain {

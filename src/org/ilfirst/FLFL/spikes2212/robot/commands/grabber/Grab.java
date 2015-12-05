@@ -24,7 +24,7 @@ public class Grab extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.grabber.grab(Constants.CLOSE_WHEELS_SPEED);
+		Robot.grabber.grab(Constants.GRAB_SPEED);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
