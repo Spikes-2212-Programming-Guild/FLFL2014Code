@@ -34,7 +34,7 @@ public class Charger extends Subsystem {
 		right.set(0);
 	}
 
-	public boolean isBallInside() {
+	public boolean isBallAtTop() {
 		return ballsDetector.get();
 	}
 

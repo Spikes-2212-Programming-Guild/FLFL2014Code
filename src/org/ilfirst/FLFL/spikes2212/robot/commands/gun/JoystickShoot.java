@@ -12,10 +12,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class JoystickShoot extends Command {
 
 	public JoystickShoot /* Don't Talk */() {
-
-		requires(Robot.gun);// Use requires() here to declare subsystem
-							// dependencies
-		// eg. requires(chassis);
+		requires(Robot.gun);
 	}
 
 	// Called just before this Command runs the first time
