@@ -35,6 +35,7 @@ public class Robot extends IterativeRobot {
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
 		oi = new OI();
 		pdp = new PowerDistributionPanel();
+		Commands.init();
 	}
 
 	@Override
