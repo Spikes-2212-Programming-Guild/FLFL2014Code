@@ -14,17 +14,21 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
-public class OI /* GEVALD */ {
+public class OI /* GEVALD */{
 	JoystickButton chargeOne = new JoystickButton(JoystickMap.navigatorStick, 3);
-	JoystickButton shootFourToHighTarget = new JoystickButton(JoystickMap.navigatorStick, 4);
-	JoystickButton shootFourToDynamicTarget = new JoystickButton(JoystickMap.navigatorStick, 5);
-	JoystickButton closeAndGrab = new JoystickButton(JoystickMap.navigatorStick, 6);
+	JoystickButton shootFourToHighTarget = new JoystickButton(
+			JoystickMap.navigatorStick, 4);
+	JoystickButton shootFourToDynamicTarget = new JoystickButton(
+			JoystickMap.navigatorStick, 5);
+	JoystickButton closeAndGrab = new JoystickButton(
+			JoystickMap.navigatorStick, 6);
 	JoystickButton openArms = new JoystickButton(JoystickMap.navigatorStick, 7);
-	JoystickButton stopChargeAndGun = new JoystickButton(JoystickMap.navigatorStick, 9);
+	JoystickButton stopChargeAndGun = new JoystickButton(
+			JoystickMap.navigatorStick, 9);
 	JoystickButton uncharge = new JoystickButton(JoystickMap.navigatorStick, 10);
 
 	public OI() {
-		chargeOne.whileHeld(new ChargeOneBall());
+		chargeOne.whenPressed(new ChargeOneBall());
 		shootFourToHighTarget.whenPressed(new ShootFourToHighTarget());
 		shootFourToDynamicTarget.whenPressed(new ShootFourToDynamicTarget());
 		closeAndGrab.whileHeld(new CloseAndGrab());

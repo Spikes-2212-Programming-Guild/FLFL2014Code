@@ -46,8 +46,8 @@ public class Drivetrain extends Subsystem {
 	}
 
 	public void setTwoSides(double leftSpeed, double rightSpeed) {
-		left.set(leftSpeed);
-		right.set(-rightSpeed);
+		left.set(-leftSpeed);
+		right.set(rightSpeed);
 	}
 
 	public void stop() {
