@@ -27,7 +27,6 @@ public class StraightLock extends Command {
 
 	@Override
 	protected void end() {
-		Robot.drivetrain.stop();
 	}
 
 	@Override

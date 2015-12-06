@@ -27,7 +27,6 @@ public class TurnLock extends Command {
 
 	@Override
 	protected void end() {
-		Robot.drivetrain.stop();
 	}
 
 	@Override

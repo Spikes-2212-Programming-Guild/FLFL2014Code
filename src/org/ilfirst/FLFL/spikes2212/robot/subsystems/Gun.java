@@ -18,6 +18,8 @@ public class Gun extends Subsystem {
 		this.right = right;
 		left.changeControlMode(ControlMode.Voltage);
 		right.changeControlMode(ControlMode.Voltage);
+		left.enableControl();
+		right.enableControl();
 	}
 
 	public Gun(int leftMotorID, int rightMotorID) {
