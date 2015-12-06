@@ -30,16 +30,16 @@ public class Constants {
 
 	// MAX_LEFT and MAX_RIGHT belong to the implementation which includes
 	// finding out the motors' real max speed manually.
-	public static final double MAX_LEFT_VOLTAGE = 12; // FIXME
-	public static final double MAX_RIGHT_VOLTAGE = 12; // FIXME
-	public static final double SHOOT_HIGH_VOLTAGE = 12; // FIXME
+	public static final double MAX_LEFT_VOLTAGE = 1; // FIXME
+	public static final double MAX_RIGHT_VOLTAGE = 1; // FIXME
+	public static final double SHOOT_HIGH_VOLTAGE = 1; // FIXME
 	public static final double SHOOT_HIGH_PERCENTAGE = 1;
 
-	public static final double SHOOT_DYNAMIC_VOLTAGE = 2; // FIXME
+	public static final double SHOOT_DYNAMIC_VOLTAGE = 0.3; // FIXME
 	public static final double SHOOT_DYNAMIC_PERCENTAGE = 0.3;
 	// MAX_VOLTAGE belongs to the implementation which includes finding the
 	// motors' real max speed during runtime.
-	public static final double MAX_VOLTAGE = 12; // FIXME
+	public static final double MAX_VOLTAGE = 1; // FIXME
 
 	public static final double LEFT_VOLTAGE_PER_VELOCITY = 0.3; // FIXME
 	public static final double RIGHT_VOLTAGE_PER_VELOCITY = 0.3; // FIXME
