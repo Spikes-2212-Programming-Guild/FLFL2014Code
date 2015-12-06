@@ -14,8 +14,8 @@ public class Drivetrain extends Subsystem {
 	}
 
 	public void forward(double speed) {
-		left.set(speed);
-		right.set(-speed);
+		left.set(-speed);
+		right.set(speed);
 	}
 
 	public void turn(double speed) {

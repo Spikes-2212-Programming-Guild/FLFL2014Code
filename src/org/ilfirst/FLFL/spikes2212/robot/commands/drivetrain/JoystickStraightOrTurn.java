@@ -24,8 +24,8 @@ public class JoystickStraightOrTurn extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		double x = JoystickMap.driverRight.getX();
-		double y = JoystickMap.driverRight.getY();
+		double x = JoystickMap.driver.getX();
+		double y = JoystickMap.driver.getY();
 		if (Math.abs(x) > Math.abs(y)) {
 			Robot.drivetrain.turn(x);
 		} else if (Math.abs(y) > Math.abs(x)) {

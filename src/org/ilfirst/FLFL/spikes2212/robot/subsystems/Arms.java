@@ -42,7 +42,6 @@ public class Arms extends Subsystem {
 	@Override
 	protected void initDefaultCommand() {
 		setDefaultCommand(new StopArms());
-
 	}
 
 }

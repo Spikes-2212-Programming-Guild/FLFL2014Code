@@ -1,8 +1,8 @@
 package org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain;
 
-import org.ilfirst.FLFL.spikes2212.robot.JoystickMap;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -10,10 +10,15 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class DoubleJoystickDriving extends Command {
 
-	public DoubleJoystickDriving() {
+	private Joystick left;
+	private Joystick right;
+
+	public DoubleJoystickDriving(Joystick left, Joystick right) {
 		requires(Robot.drivetrain);
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
+		this.left = left;
+		this.right = right;
 	}
 
 	// Called just before this Command runs the first time
@@ -24,7 +29,7 @@ public class DoubleJoystickDriving extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.drivetrain.setTwoSides(JoystickMap.driverLeft.getY(), JoystickMap.driverRight.getY());
+		Robot.drivetrain.setTwoSides(left.getY(), right.getY());
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

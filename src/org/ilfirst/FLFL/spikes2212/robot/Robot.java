@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends IterativeRobot {
 
@@ -37,11 +38,10 @@ public class Robot extends IterativeRobot {
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
 		// grabber = new Grabber(PWM.GRABBER_LEFT, PWM.GRABBER_RIGHT);
 		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT, DIO.BALLS_DETECTOR);
-		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_CLOSED, DIO.ARMS_OPEN);
+		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_LEFT_OPEN, DIO.ARMS_RIGHT_OPEN);
 		oi = new OI();
 		pdp = new PowerDistributionPanel();
 		// autonomousCommand = new DriveAndShoot();
-		Commands.init();
 	}
 
 	@Override
@@ -66,6 +66,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		SmartDashboard.putBoolean("Ball", charger.isBallAtTop());
 	}
 
 	@Override

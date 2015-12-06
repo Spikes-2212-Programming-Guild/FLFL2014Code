@@ -12,18 +12,18 @@ public class Constants {
 	/*
 	 * Charger
 	 */
-	public static final double CHARGING_SPEED = 0.1; // FIXME
+	public static final double CHARGING_SPEED = 1;
 
 	/*
 	 * Arms
 	 */
-	public static final double CLOSE_ARMS_SPEED = 0.1; // FIXME
-	public static final double OPEN_ARMS_SPEED = 0.1; // FIXME
+	public static final double CLOSE_ARMS_SPEED = 1;
+	public static final double OPEN_ARMS_SPEED = 1;
 
 	/*
 	 * Grabber
 	 */
-	public static final double GRAB_SPEED = 0.1; // FIXME
+	public static final double GRAB_SPEED = 1;
 
 	public static final double AUTONOMUS_DRIVING_TIME = 2; // FIXME
 	public static final double AUTONOMUS_DRIVING_SPEED = 0.5;
@@ -33,7 +33,10 @@ public class Constants {
 	public static final double MAX_LEFT_VOLTAGE = 12; // FIXME
 	public static final double MAX_RIGHT_VOLTAGE = 12; // FIXME
 	public static final double SHOOT_HIGH_VOLTAGE = 12; // FIXME
+	public static final double SHOOT_HIGH_PERCENTAGE = 1;
+
 	public static final double SHOOT_DYNAMIC_VOLTAGE = 2; // FIXME
+	public static final double SHOOT_DYNAMIC_PERCENTAGE = 0.3;
 	// MAX_VOLTAGE belongs to the implementation which includes finding the
 	// motors' real max speed during runtime.
 	public static final double MAX_VOLTAGE = 12; // FIXME

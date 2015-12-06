@@ -11,6 +11,6 @@ public class DriveAndShoot extends CommandGroup {
 
 	public DriveAndShoot() {
 		addParallel(new DriveBySpeedAndTime(Constants.AUTONOMUS_DRIVING_SPEED, Constants.AUTONOMUS_DRIVING_TIME));
-		addSequential(new ChargingAndShooting());
+		addSequential(new ShootFourToHighTarget());
 	}
 }

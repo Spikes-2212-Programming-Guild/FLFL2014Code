@@ -26,6 +26,11 @@ public class Charger extends Subsystem {
 
 	public void charge() {
 		left.set(Constants.CHARGING_SPEED);
+		right.set(Constants.CHARGING_SPEED);
+	}
+
+	public void uncharge() {
+		left.set(-Constants.CHARGING_SPEED);
 		right.set(-Constants.CHARGING_SPEED);
 	}
 
@@ -35,7 +40,7 @@ public class Charger extends Subsystem {
 	}
 
 	public boolean isBallAtTop() {
-		return ballsDetector.get();
+		return !ballsDetector.get();
 	}
 
 	// Put methods for controlling this subsystem

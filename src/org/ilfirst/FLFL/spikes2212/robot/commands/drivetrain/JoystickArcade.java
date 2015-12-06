@@ -24,8 +24,8 @@ public class JoystickArcade extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.drivetrain.arcade(JoystickMap.driverRight.getY(),
-				JoystickMap.driverRight.getX());
+		Robot.drivetrain.arcade(JoystickMap.driver.getY(),
+				JoystickMap.driver.getX());
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
