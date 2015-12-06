@@ -58,6 +58,5 @@ public class Drivetrain extends Subsystem {
 	@Override
 	protected void initDefaultCommand() {
 		setDefaultCommand(new JoystickArcade());
-		// TODO Auto-generated method stub}
 	}
 }

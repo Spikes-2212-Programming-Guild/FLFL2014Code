@@ -21,7 +21,8 @@ public class Charger extends Subsystem {
 	}
 
 	public Charger(int leftPort, int rightPort, int ballsDetectorPort) {
-		this(new VictorSP(leftPort), new VictorSP(rightPort), new DigitalInput(ballsDetectorPort));
+		this(new VictorSP(leftPort), new VictorSP(rightPort), new DigitalInput(
+				ballsDetectorPort));
 	}
 
 	public void charge() {

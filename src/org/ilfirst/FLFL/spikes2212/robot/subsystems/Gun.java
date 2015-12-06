@@ -3,6 +3,7 @@ package org.ilfirst.FLFL.spikes2212.robot.subsystems;
 import org.ilfirst.FLFL.spikes2212.robot.commands.gun.StopGun;
 
 import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.CANTalon.ControlMode;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -15,15 +16,12 @@ public class Gun extends Subsystem {
 	public Gun(CANTalon left, CANTalon right) {
 		this.left = left;
 		this.right = right;
+		left.changeControlMode(ControlMode.Voltage);
+		right.changeControlMode(ControlMode.Voltage);
 	}
 
 	public Gun(int leftMotorID, int rightMotorID) {
 		this(new CANTalon(leftMotorID), new CANTalon(rightMotorID));
-	}
-
-	public Gun(int leftMotorID, int rightMotorID, int leftCounterPort, int rightCounterPort) {
-		this.left = new CANTalon(leftMotorID);
-		this.right = new CANTalon(rightMotorID);
 	}
 
 	public void shoot(double leftVoltage, double rightVoltage) {

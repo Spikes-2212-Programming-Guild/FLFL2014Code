@@ -3,6 +3,7 @@ package org.ilfirst.FLFL.spikes2212.robot.commands.gun;
 import org.ilfirst.FLFL.spikes2212.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -30,7 +31,8 @@ public class StartGun extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.gun.shoot(leftVoltage, rightVoltage);
+		Robot.gun.shoot(SmartDashboard.getNumber("left"),
+				SmartDashboard.getNumber("right"));
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

@@ -37,11 +37,15 @@ public class Robot extends IterativeRobot {
 		drivetrain = new Drivetrain(left, right);
 		gun = new Gun(CAN.SHOOTER_LEFT, CAN.SHOOTER_RIGHT);
 		// grabber = new Grabber(PWM.GRABBER_LEFT, PWM.GRABBER_RIGHT);
-		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT, DIO.BALLS_DETECTOR);
-		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_LEFT_OPEN, DIO.ARMS_RIGHT_OPEN);
+		charger = new Charger(PWM.LOADER_LEFT, PWM.LOADER_RIGHT,
+				DIO.BALLS_DETECTOR);
+		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_LEFT_OPEN,
+				DIO.ARMS_RIGHT_OPEN);
 		oi = new OI();
 		pdp = new PowerDistributionPanel();
 		// autonomousCommand = new DriveAndShoot();
+		SmartDashboard.putNumber("left", 0);
+		SmartDashboard.putNumber("right", 0);
 	}
 
 	@Override
