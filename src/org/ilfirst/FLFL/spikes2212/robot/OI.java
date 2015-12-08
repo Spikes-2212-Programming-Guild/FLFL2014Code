@@ -1,12 +1,14 @@
 package org.ilfirst.FLFL.spikes2212.robot;
 
-import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.CloseAndGrab;
 import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.ShootFourToDynamicTarget;
 import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.ShootFourToHighTarget;
+import org.ilfirst.FLFL.spikes2212.robot.commands.arms.CloseArms;
+import org.ilfirst.FLFL.spikes2212.robot.commands.arms.OpenArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.ChargeOneBall;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.Uncharge;
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.StraightLock;
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.TurnLock;
+import org.ilfirst.FLFL.spikes2212.robot.commands.grabber.Grab;
 
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -21,13 +23,12 @@ public class OI /* GEVALD */{
 			JoystickMap.navigatorStick, 4);
 	JoystickButton shootFourToDynamicTarget = new JoystickButton(
 			JoystickMap.navigatorStick, 5);
-	JoystickButton closeAndGrab = new JoystickButton(
-			JoystickMap.navigatorStick, 6);
+	JoystickButton closeArms = new JoystickButton(JoystickMap.navigatorStick, 6);
 	JoystickButton openArms = new JoystickButton(JoystickMap.navigatorStick, 7);
 	JoystickButton stopChargeAndGun = new JoystickButton(
 			JoystickMap.navigatorStick, 10); // was once 9!!
 	JoystickButton uncharge = new JoystickButton(JoystickMap.navigatorStick, 11); // was
-
+	JoystickButton grab = new JoystickButton(JoystickMap.navigatorStick, 8);
 	JoystickButton turnLock = new JoystickButton(JoystickMap.driver, 11);
 	JoystickButton straightLock = new JoystickButton(JoystickMap.driver, 10);
 
@@ -35,9 +36,11 @@ public class OI /* GEVALD */{
 		chargeOne.whenPressed(new ChargeOneBall());
 		shootFourToHighTarget.whenPressed(new ShootFourToHighTarget());
 		shootFourToDynamicTarget.whenPressed(new ShootFourToDynamicTarget());
-		closeAndGrab.whileHeld(new CloseAndGrab());
+		closeArms.whileHeld(new CloseArms());
+		openArms.whileHeld(new OpenArms());
 		uncharge.whileHeld(new Uncharge());
 		turnLock.whileHeld(new TurnLock());
 		straightLock.whileHeld(new StraightLock());
+		grab.toggleWhenPressed(new Grab());
 	}
 }
