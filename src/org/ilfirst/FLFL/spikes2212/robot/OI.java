@@ -3,8 +3,6 @@ package org.ilfirst.FLFL.spikes2212.robot;
 import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.CloseAndGrab;
 import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.ShootFourToDynamicTarget;
 import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.ShootFourToHighTarget;
-import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.StopChargerAndGun;
-import org.ilfirst.FLFL.spikes2212.robot.commands.arms.OpenArms;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.ChargeOneBall;
 import org.ilfirst.FLFL.spikes2212.robot.commands.charger.Uncharge;
 import org.ilfirst.FLFL.spikes2212.robot.commands.drivetrain.StraightLock;
@@ -38,8 +36,6 @@ public class OI /* GEVALD */{
 		shootFourToHighTarget.whenPressed(new ShootFourToHighTarget());
 		shootFourToDynamicTarget.whenPressed(new ShootFourToDynamicTarget());
 		closeAndGrab.whileHeld(new CloseAndGrab());
-		openArms.whileHeld(new OpenArms());
-		stopChargeAndGun.whenPressed(new StopChargerAndGun());
 		uncharge.whileHeld(new Uncharge());
 		turnLock.whileHeld(new TurnLock());
 		straightLock.whileHeld(new StraightLock());

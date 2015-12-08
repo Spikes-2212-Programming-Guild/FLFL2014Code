@@ -15,11 +15,10 @@ public class RobotMap {
 		public static final int RIGHT_REAR = 1;
 		public static final int LOADER_LEFT = 8;
 		public static final int LOADER_RIGHT = 9;
-		public static final int ARM_LEFT = 4;
-		public static final int ARM_RIGHT = 5;
-		public static final int GRABBER_LEFT = 6;
-		public static final int GRABBER_RIGHT = 7;
-
+		public static final int ARM_LEFT = 7;
+		public static final int ARM_RIGHT = 6;
+		public static final int GRABBER_LEFT = 5;
+		public static final int GRABBER_RIGHT = 4;
 	}
 
 	public static class CAN {

@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.command.WaitCommand;
 public class ShootFourToDynamicTarget extends CommandGroup {
 
 	public static final double START_GUN_TIMEOUT = 2;
-	public static final double SHOOTING_SPEED = 0.22;
+	public static final double SHOOTING_SPEED = 0.2212;
 
 	public ShootFourToDynamicTarget() {
 		addParallel(new ChargeOneBall());

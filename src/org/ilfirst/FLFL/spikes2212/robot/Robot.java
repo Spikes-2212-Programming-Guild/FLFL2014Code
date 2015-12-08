@@ -3,6 +3,7 @@ package org.ilfirst.FLFL.spikes2212.robot;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.CAN;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.DIO;
 import org.ilfirst.FLFL.spikes2212.robot.RobotMap.PWM;
+import org.ilfirst.FLFL.spikes2212.robot.commands.advanced.DriveBySpeedAndTime;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Arms;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Camera;
 import org.ilfirst.FLFL.spikes2212.robot.subsystems.Charger;
@@ -42,10 +43,14 @@ public class Robot extends IterativeRobot {
 		arms = new Arms(PWM.ARM_LEFT, PWM.ARM_RIGHT, DIO.ARMS_LEFT_OPEN,
 				DIO.ARMS_RIGHT_OPEN);
 		oi = new OI();
-		pdp = new PowerDistributionPanel();
-		// autonomousCommand = new DriveAndShoot();
-		SmartDashboard.putNumber("left", 0);
-		SmartDashboard.putNumber("right", 0);
+		autonomousCommand = new DriveBySpeedAndTime(0.5, 3);
+		// pdp = new PowerDistributionPanel();
+		// // autonomousCommand = new DriveAndShoot();
+		// SmartDashboard.putNumber("left", 0);
+		// SmartDashboard.putNumber("right", 0);
+		//
+		// SmartDashboard.putBoolean("openLimitExist", false);
+		// SmartDashboard.putBoolean("isLimitExist", false);
 	}
 
 	@Override

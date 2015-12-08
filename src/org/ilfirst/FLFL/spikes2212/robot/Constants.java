@@ -17,8 +17,8 @@ public class Constants {
 	/*
 	 * Arms
 	 */
-	public static final double CLOSE_ARMS_SPEED = 1;
-	public static final double OPEN_ARMS_SPEED = 1;
+	public static final double CLOSE_ARMS_SPEED = -0.7;
+	public static final double OPEN_ARMS_SPEED = -0.7;
 
 	/*
 	 * Grabber

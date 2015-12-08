@@ -9,4 +9,5 @@ public class Util {
 				* (distance * Math.tan(angle) - height));
 		return distance / (time * Math.cos(angle));
 	}
+
 }
